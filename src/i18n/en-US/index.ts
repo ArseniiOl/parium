@@ -6,4 +6,12 @@ export default {
   welcome: 'Ласкаво ',
   welcomeTo: 'просимо до',
   welcomeSectionText: ' досвідчений та сучасний бізнес у сфері будівництва',
+  organizeObjectCreation: 'Організовуємо створення об’єкту',
+  fullCycleConstruction: 'ПОВНИЙ  ЦИКЛ  БУДІВНИЦТВА',
+  permissiveDocumentation: 'Дозвільна документація',
+  projectDevelopment: 'Розробка проекту',
+  processOrganization: 'Організація процесу створення об’єкту',
+  organizationNotice: 'від виготовлення документації до виконання робіт та здачі експлуатацію',
+  reconstructionText: 'Реконструкція та реставрація об’єктів',
+  buildingText: 'Будівництво житлових та виробничих об’єктів',
 };
