@@ -1,0 +1,70 @@
+@import "../../lib/var";
+
+.welcome-section {
+  height: 100vh;
+  padding: 180px 58px 0;
+
+  &__wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 50%;
+    margin-top: auto;
+    animation: moveInBottom .3s ease-out .25s;
+    animation-fill-mode: backwards;
+  }
+
+  &__text {
+    max-width: 50%;
+    font-size: 20px;
+    line-height: 25px;
+
+  }
+}
+
+.back-slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+}
+
+.main-nav {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  animation: moveInRight 1s ease-out;
+
+  &__list {
+    width: fit-content;
+  }
+
+  &__item {
+   align-items: center;
+    min-height: 40px;
+    min-width: 175px;
+    padding: 8px 24px 8px 4px;
+    font-size: 15px;
+    font-family: $light;
+    cursor: pointer;
+    transition: $transition;
+    width: fit-content;
+
+    .q-icon {
+      font-size: 31px;
+      margin-right: 32px;
+    }
+
+    &:hover {
+      font-family: $black;
+    }
+  }
+}
+
+.app-title {
+  margin: 0 0 22px;
+  font-size: 84px;
+
+  line-height: 70px;
+}

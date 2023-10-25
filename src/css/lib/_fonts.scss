@@ -1,0 +1,80 @@
+@font-face {
+  font-family: Inter-Thin;
+  src: url(src/css/fonts/Inter-Thin.woff2);
+}
+
+@font-face {
+  font-family: Inter-Light;
+  src: url(src/css/fonts/Inter-Light.woff2);
+}
+
+@font-face {
+  font-family: Inter-LightItalic;
+  src: url(src/css/fonts/Inter-LightItalic.woff2);
+}
+
+@font-face {
+  font-family: Inter-Regular;
+  src: url(./fonts/Inter-Regular.woff2);
+}
+
+@font-face {
+  font-family: Inter-Medium;
+  src: url(./fonts/Inter-Medium.woff2);
+}
+
+@font-face {
+  font-family: Inter-SemiBold;
+  src: url(./fonts/Inter-SemiBold.woff2);
+}
+
+@font-face {
+  font-family: Inter-Bold;
+  src: url(./fonts/Inter-Bold.woff2);
+}
+
+@font-face {
+  font-family: Inter-ExtraBold;
+  src: url(./fonts/Inter-ExtraBold.woff2);
+}
+
+@font-face {
+  font-family: Inter-Black;
+  src: url(./fonts/Inter-Black.woff2);
+}
+
+.ft-thin {
+  font-family: 'Inter-Thin';
+}
+
+.ft-light {
+  font-family: 'Inter-Light';
+}
+
+.ft-light-italic {
+  font-family: 'Inter-LightItalic';
+}
+
+.ft-regular {
+  font-family: 'Inter-Regular';
+}
+
+.ft-medium {
+  font-family: 'Inter-Medium';
+}
+
+.ft-semibold {
+  font-family: 'Inter-SemiBold';
+}
+
+.ft-bold{
+  font-family: 'Inter-Bold';
+}
+
+.ft-extrabold {
+  font-family: 'Inter-ExtraBold';
+}
+
+.ft-black {
+  font-family: 'Inter-Black';
+}
