@@ -12,13 +12,12 @@ const { t } = useI18n();
 </script>
 
 <template>
-  <section class="about-section relative-position flex column no-wrap justify-center items-center">
+  <section id="about" class="about-section relative-position flex column no-wrap justify-center items-center">
     <div class="about-section__bg">
       <q-img fetchpriority="high" src="~assets/img/about-bg.png" alt="img-1">
         <template #loading></template>
       </q-img>
     </div>
-
 
     <div class="cycle-wrap flex column no-wrap justify-center items-center">
       <h2 class="cycle-wrap__title text-uppercase ft-thin-italic">
@@ -86,7 +85,85 @@ const { t } = useI18n();
       </q-list>
     </div>
 
+    <div class="about-wrap flex column no-wrap justify-center items-center">
+      <div class="about-wrap__title text-center ft-medium">
+        {{ t('aboutUs')}}
+      </div>
 
+      <div class="about-wrap__text flex no-wrap">
+        <span class="about-wrap__text__num ft-light-italic">
+          5
+        </span>
+
+        <p class="about-wrap__text__notice ft-thin-italic">
+          <span class="ft-semibold-italic">
+            {{ t('years')}}
+          </span>
+
+          {{ t('aboutText')}}
+        </p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__item timeline__item--1">
+          <div class="timeline__item__top timeline__item__num">
+            2018
+          </div>
+
+          <span class="timeline__point timeline__point--lg"></span>
+
+          <div class="timeline__item__bottom">
+            {{ t('timelineText1')}}
+          </div>
+        </div>
+
+        <div class="timeline__item timeline__item--2">
+          <div class="timeline__item__img">
+            <q-img fetchpriority="low" src="~assets/img/timeline-img-1.png" alt="construction-1" />
+
+          </div>
+
+          <span class="timeline__point"></span>
+
+          <div class="timeline__item__bottom">
+           <p> {{ t('timelineText2')}} </p>
+
+            <span>2020</span>
+          </div>
+        </div>
+
+        <div class="timeline__item timeline__item--3">
+          <div class="timeline__item__img">
+            <q-img fetchpriority="low" src="~assets/img/timeline-img-2.png" alt="construction-2" />
+
+          </div>
+
+          <span class="timeline__point"></span>
+
+          <div class="timeline__item__bottom">
+            <p> {{ t('timelineText3')}} </p>
+
+            <span>2021</span>
+          </div>
+        </div>
+
+        <div class="timeline__item timeline__item--3">
+          <div class="timeline__item__img">
+            <q-img fetchpriority="low" src="~assets/img/timeline-img-3.png" alt="construction-3" />
+
+          </div>
+
+          <span class="timeline__point"></span>
+
+          <div class="timeline__item__bottom">
+            <p> {{ t('timelineText4')}} </p>
+
+            <span>2022</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </section>
 </template>
 

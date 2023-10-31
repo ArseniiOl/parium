@@ -43,6 +43,7 @@ const autoplay = ref(true);
     <nav class="main-nav">
       <q-list class="main-nav__list">
         <q-item class="main-nav__item">
+          <a href="#about" class="cover-link" ></a>
           <arrow-right-svg/>
 
           {{ t('aboutUs')}}

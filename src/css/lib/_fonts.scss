@@ -39,6 +39,11 @@
 }
 
 @font-face {
+  font-family: Inter-SemiBoldItalic;
+  src: url(./fonts/Inter-SemiBoldItalic.woff2);
+}
+
+@font-face {
   font-family: Inter-Bold;
   src: url(./fonts/Inter-Bold.woff2);
 }
@@ -83,6 +88,10 @@
 
 .ft-semibold {
   font-family: 'Inter-SemiBold';
+}
+
+.ft-semibold-italic {
+  font-family: 'Inter-SemiBoldItalic';
 }
 
 .ft-bold{
