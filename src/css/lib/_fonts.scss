@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: Inter-ThinItalic;
+  src: url(src/css/fonts/Inter-ThinItalic.woff2);
+}
+
+@font-face {
   font-family: Inter-Light;
   src: url(src/css/fonts/Inter-Light.woff2);
 }
@@ -21,6 +26,11 @@
 @font-face {
   font-family: Inter-Medium;
   src: url(./fonts/Inter-Medium.woff2);
+}
+
+@font-face {
+  font-family: Inter-MediumItalic;
+  src: url(./fonts/Inter-MediumItalic.woff2);
 }
 
 @font-face {
@@ -47,6 +57,10 @@
   font-family: 'Inter-Thin';
 }
 
+.ft-thin-italic {
+  font-family: 'Inter-ThinItalic';
+}
+
 .ft-light {
   font-family: 'Inter-Light';
 }
@@ -61,6 +75,10 @@
 
 .ft-medium {
   font-family: 'Inter-Medium';
+}
+
+.ft-medium-italic {
+  font-family: 'Inter-MediumItalic';
 }
 
 .ft-semibold {

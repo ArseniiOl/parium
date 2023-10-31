@@ -1,0 +1,120 @@
+@import "../../quasar.variables";
+@import "../../lib/var";
+@import "../../lib/animation";
+
+.about-section {
+  padding: 155px 58px;
+
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: darken;
+  }
+}
+
+.block-list {
+  &__item {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 22px;
+    height: 206px;
+    width: 137px;
+    font-family: $light-italic;
+
+    + .block-list__item {
+      margin-left: 19px;
+    }
+
+    &--primary {
+      background: rgba(157, 162, 202, 0.3);
+      height: 265px;
+      width: 187px;
+      justify-content: flex-start;
+
+      .block-list__text {
+        margin-bottom: 17px;
+      }
+    }
+  }
+
+  &__icon {
+
+   &--1 {
+     margin-bottom: 29px;
+
+      .q-icon {
+        font-size: 41px;
+      }
+    }
+
+    &--2 {
+      margin-bottom: 25px;
+
+      .q-icon {
+        font-size: 46px;
+      }
+    }
+
+    &--3 {
+
+      .q-icon {
+        font-size: 144px;
+      }
+    }
+
+    &--4 {
+       margin-bottom: 26px;
+
+      .q-icon {
+        font-size: 50px;
+      }
+    }
+
+    &--5 {
+      margin-bottom: 26px;
+
+      .q-icon {
+        font-size: 62px;
+      }
+    }
+  }
+
+  &__text {
+    line-height: 16px;
+  }
+
+  &__notice {
+    font-size: 11px;
+    line-height: 12px;
+    color: #8A96D6;
+    padding: 0 7px;
+  }
+
+}
+
+.cycle-wrap {
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 38px;
+    color: #A4A5AB;
+    font-size: 53px;
+    line-height: 49px;
+    text-align: center;
+    max-width: 55%;
+  }
+
+  &__subtitle {
+    font-size: 17px;
+    line-height: 35px;
+    color: $accent;
+    letter-spacing: 16px;
+    margin-bottom: 65px;
+  }
+}

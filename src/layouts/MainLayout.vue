@@ -3,7 +3,7 @@ import AppHeader from "components/general/AppHeader.vue";
 </script>
 
 <template>
-  <q-layout view="hHh lpR fFf">
+  <q-layout view="hhh lpR fFf">
     <app-header />
 
     <q-page-container>
