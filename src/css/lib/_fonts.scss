@@ -9,6 +9,11 @@
 }
 
 @font-face {
+  font-family: Inter-ExtraLight;
+  src: url(src/css/fonts/Inter-ExtraLight.woff2);
+}
+
+@font-face {
   font-family: Inter-Light;
   src: url(src/css/fonts/Inter-Light.woff2);
 }
@@ -64,6 +69,10 @@
 
 .ft-thin-italic {
   font-family: 'Inter-ThinItalic';
+}
+
+.ft-extra-light {
+  font-family: 'Inter-ExtraLight';
 }
 
 .ft-light {

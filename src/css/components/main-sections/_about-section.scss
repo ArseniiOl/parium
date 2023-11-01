@@ -269,3 +269,81 @@
     }
   }
 }
+
+.guarantees-wrap {
+  margin-bottom: 154px;
+
+  &__title {
+    display: flex;
+    margin-bottom: 60px;
+    color: #9193A8;
+    font-size: 64px;
+    line-height: 30px;
+  }
+
+  &__notice {
+    max-width: 610px;
+    margin-bottom: 60px;
+    font-size: 18px;
+    line-height: 23px;
+    color: $secondary;
+    text-align: center;
+  }
+
+  &__items {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 180px;
+
+    &__img {
+      margin-bottom: 16px;
+      @include align-justify-center;
+      background: rgba(89, 98, 166, 0.5);
+
+      &--1 {
+        border-radius: 45% 55% 59% 41% / 60% 49% 51% 40% ;
+        width: 74px;
+        height: 77px;
+      }
+
+      &--2 {
+        width: 77px;
+        height: 74px;
+        border-radius: 41% 59% 69% 31% / 50% 56% 44% 50%;
+      }
+
+      &--3 {
+        width: 78px;
+        height: 72px;
+        border-radius: 62% 38% 38% 62% / 50% 47% 53% 50%;
+      }
+
+      .q-icon {
+        font-size: 43px;
+      }
+    }
+
+    &__text {
+      font-family: $bold;
+      color: #D7D7D7;
+      font-size: 15px;
+      line-height: 17px;
+      letter-spacing: 2px;
+      text-align: center;
+      max-width: 180px;
+    }
+  }
+}
+
+.logo {
+  width: 176px;
+  height: 43px;
+  margin-left: 28px;
+}

@@ -6,6 +6,9 @@ import DevelopmentSvg from "components/icons/DevelopmentSvg.vue";
 import OrganizationSvg from "components/icons/OrganizationSvg.vue";
 import ObjectSvg from "components/icons/ObjectSvg.vue";
 import BuildingSvg from "components/icons/BuildingSvg.vue";
+import FunctionalitySvg from "components/icons/FunctionalitySvg.vue";
+import SpendingSvg from "components/icons/SpendingSvg.vue";
+import AccuracySvg from "components/icons/AccuracySvg.vue";
 
 const { t } = useI18n();
 const slider = ref(1);
@@ -246,6 +249,54 @@ const autoplay = ref(true);
         </q-carousel-slide>
 
       </q-carousel>
+    </div>
+
+    <div class="guarantees-wrap flex column no-wrap justify-center items-center">
+        <div class="guarantees-wrap__title ft-extra-light">
+          {{ t('guarantees')}}
+
+          <div class="logo">
+              <q-img fetchpriority="high" src="~assets/img/logo-2.png" alt="parium" />
+          </div>
+        </div>
+
+      <div class="guarantees-wrap__notice ft-extra-light">
+          {{t('guaranteesNotice1')}}
+
+        <span class="ft-bold">{{t('guaranteesNotice2')}}</span>
+      </div>
+
+      <div class="guarantees-wrap__items">
+        <div class="guarantees-wrap__item">
+          <div class="guarantees-wrap__item__img guarantees-wrap__item__img--1">
+            <functionality-svg/>
+          </div>
+
+          <p class="guarantees-wrap__item__text">
+            {{ t('functionality')}}
+          </p>
+        </div>
+
+        <div class="guarantees-wrap__item">
+          <div class="guarantees-wrap__item__img guarantees-wrap__item__img--2">
+            <spending-svg/>
+          </div>
+
+          <p class="guarantees-wrap__item__text">
+            {{ t('optimalityOfCosts')}}
+          </p>
+        </div>
+
+        <div class="guarantees-wrap__item">
+          <div class="guarantees-wrap__item__img guarantees-wrap__item__img--3">
+            <accuracy-svg/>
+          </div>
+
+          <p class="guarantees-wrap__item__text">
+            {{ t('accuracyOfProject')}}
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 </template>
