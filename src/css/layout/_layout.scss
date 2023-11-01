@@ -81,3 +81,23 @@
     }
   }
 }
+
+.principles-item {
+  .q-item {
+    padding: 0;
+
+    &__section--side {
+      color: #DEDFE5;
+
+      .q-icon {
+        font-size: 50px;
+      }
+    }
+
+    &--clickable {
+      z-index: 4;
+    }
+  }
+
+
+}

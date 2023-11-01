@@ -29,6 +29,11 @@
 }
 
 @font-face {
+  font-family: Inter-Italic;
+  src: url(./fonts/Inter-Italic.woff2);
+}
+
+@font-face {
   font-family: Inter-Medium;
   src: url(./fonts/Inter-Medium.woff2);
 }
@@ -54,6 +59,11 @@
 }
 
 @font-face {
+  font-family: Inter-BoldItalic;
+  src: url(./fonts/Inter-BoldItalic.woff2);
+}
+
+@font-face {
   font-family: Inter-ExtraBold;
   src: url(./fonts/Inter-ExtraBold.woff2);
 }
@@ -61,6 +71,11 @@
 @font-face {
   font-family: Inter-Black;
   src: url(./fonts/Inter-Black.woff2);
+}
+
+@font-face {
+  font-family: Inter-BlackItalic;
+  src: url(./fonts/Inter-BlackItalic.woff2);
 }
 
 .ft-thin {
@@ -87,6 +102,10 @@
   font-family: 'Inter-Regular';
 }
 
+.ft-italic {
+  font-family: 'Inter-Italic';
+}
+
 .ft-medium {
   font-family: 'Inter-Medium';
 }
@@ -107,10 +126,18 @@
   font-family: 'Inter-Bold';
 }
 
+.ft-bold-italic {
+  font-family: 'Inter-BoldItalic';
+}
+
 .ft-extrabold {
   font-family: 'Inter-ExtraBold';
 }
 
 .ft-black {
   font-family: 'Inter-Black';
+}
+
+.ft-black-italic {
+  font-family: 'Inter-BlackItalic';
 }
