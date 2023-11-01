@@ -8,7 +8,8 @@ import ObjectSvg from "components/icons/ObjectSvg.vue";
 import BuildingSvg from "components/icons/BuildingSvg.vue";
 
 const { t } = useI18n();
-
+const slider = ref(1);
+const autoplay = ref(true);
 </script>
 
 <template>
@@ -163,6 +164,88 @@ const { t } = useI18n();
         </div>
 
       </div>
+    </div>
+
+    <div class="about-carousel">
+      <q-carousel
+        animated
+        v-model="slider"
+        infinite
+        :autoplay="autoplay"
+        transition-prev="slide-right"
+        transition-next="slide-left"
+        navigation
+        padding
+        class="about-slider"
+      >
+        <q-carousel-slide :name="1">
+          <div class="flex no-wrap about-slider__wrap">
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
+            </div>
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-2.png" alt="img-2" />
+            </div>
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
+            </div>
+          </div>
+        </q-carousel-slide>
+        <q-carousel-slide :name="2">
+          <div class="flex no-wrap about-slider__wrap">
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
+            </div>
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-2.png" alt="img-2" />
+            </div>
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
+            </div>
+          </div>
+        </q-carousel-slide>
+        <q-carousel-slide :name="3">
+          <div class="flex no-wrap about-slider__wrap">
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
+            </div>
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-2.png" alt="img-2" />
+            </div>
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
+            </div>
+          </div>
+        </q-carousel-slide>
+        <q-carousel-slide :name="4">
+          <div class="flex no-wrap about-slider__wrap">
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
+            </div>
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-2.png" alt="img-2" />
+            </div>
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
+            </div>
+          </div>
+        </q-carousel-slide>
+
+        <q-carousel-slide :name="5">
+          <div class="flex no-wrap about-slider__wrap">
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
+            </div>
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-2.png" alt="img-2" />
+            </div>
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
+            </div>
+          </div>
+        </q-carousel-slide>
+
+      </q-carousel>
     </div>
   </section>
 </template>

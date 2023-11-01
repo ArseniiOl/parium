@@ -245,3 +245,27 @@
     }
   }
 }
+
+.about-carousel {
+  position: relative;
+  width: calc(100% + 116px);
+  margin-bottom: 157px;
+}
+
+.about-slider {
+  height: 480px;
+  background: transparent;
+
+  &__wrap {
+    height: 420px;
+  }
+
+  &__img {
+    height: 100%;
+    width: 65%;
+
+    + .about-slider__img {
+      margin-left: 21px;
+    }
+  }
+}
