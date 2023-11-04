@@ -3,6 +3,7 @@ import WelcomeSection from "../components/main-sections/WelcomeSection.vue";
 import AboutSection from "components/main-sections/AboutSection.vue";
 import PrinciplesSection from "components/main-sections/PrinciplesSection.vue";
 import TeamSection from "components/main-sections/TeamSection.vue";
+import TeamBannerSection from "components/main-sections/TeamBannerSection.vue";
 
 </script>
 
@@ -15,6 +16,8 @@ import TeamSection from "components/main-sections/TeamSection.vue";
     <principles-section/>
 
     <team-section/>
+
+    <team-banner-section/>
   </div>
 </template>
 

@@ -166,3 +166,4 @@ const teamSlide = ref(1);
 <style scoped lang="scss">
 @import "src/css/components/main-sections/team-section";
 </style>
+
