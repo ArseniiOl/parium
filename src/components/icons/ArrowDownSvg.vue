@@ -1,0 +1,8 @@
+<template>
+<q-icon>
+  <svg width="26" height="53" viewBox="0 0 26 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12.8223 0L12.8223 50.7995" stroke="#DEDFE6" stroke-width="2"/>
+    <path d="M0.890625 39.1025L12.5506 51.134L24.4818 39.1025" stroke="#DEDFE6" stroke-width="2"/>
+  </svg>
+</q-icon>
+</template>

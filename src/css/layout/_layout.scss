@@ -101,3 +101,17 @@
 
 
 }
+
+.team-slider {
+  &__next {
+    img {
+      object-position: 0 0 !important;
+    }
+  }
+
+  .q-carousel {
+    &__control {
+
+    }
+  }
+}

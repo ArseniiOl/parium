@@ -2,6 +2,7 @@
 import WelcomeSection from "../components/main-sections/WelcomeSection.vue";
 import AboutSection from "components/main-sections/AboutSection.vue";
 import PrinciplesSection from "components/main-sections/PrinciplesSection.vue";
+import TeamSection from "components/main-sections/TeamSection.vue";
 
 </script>
 
@@ -12,6 +13,8 @@ import PrinciplesSection from "components/main-sections/PrinciplesSection.vue";
     <about-section/>
 
     <principles-section/>
+
+    <team-section/>
   </div>
 </template>
 
