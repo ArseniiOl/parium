@@ -1,0 +1,78 @@
+@import "../../lib/var";
+@import "../../lib/mixins";
+@import "../../quasar.variables";
+
+.contacts {
+  padding: 100px 52px 188px;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 74px;
+    font-size: 30px;
+    line-height: 73px;
+    letter-spacing: 17px;
+  }
+
+  &__text {
+    margin-bottom: 42px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 60px;
+
+    span {
+      border-bottom: 1px solid #fff;
+      transition: $transition;
+    }
+
+    &:hover {
+      span {
+        color: $secondary;
+
+        border-color: $secondary;
+      }
+    }
+  }
+
+  &__mail {
+    margin-bottom: 135px;
+    font-size: 19px;
+    letter-spacing: 5px;
+    transition: $transition;
+
+    &:hover {
+      letter-spacing: 3px;
+      color: $secondary;
+    }
+  }
+}
+
+.lang-btns-wrap {
+  justify-content: space-between;
+  max-width: 570px;
+  width: 100%;
+}
+
+.lang-btn {
+  font-family: $medium;
+  font-size: 20px;
+  border: 2px solid #50599D;
+  width: 110px;
+  height: 61px;
+  border-radius: 12px;
+  transition: $transition;
+
+  &.active {
+    font-family: $extra-bold;
+    border-width: 7px;
+  }
+
+  &:hover {
+    font-family: $extra-bold;
+    border-width: 7px;
+  }
+}
