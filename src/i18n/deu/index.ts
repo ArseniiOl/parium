@@ -54,4 +54,9 @@ export default {
   management: 'Управління.',
   experience: 'Досвід.',
   creativity: 'Креативність.',
+  objectsInProcess: 'Об’єкти в процесі реалізації',
+  kulishStr: 'вул. Куліша',
+  reconstructionOfBuilding: 'реконструкція адмінбудинку',
+  vunnuchenkoStr: 'вул. Винниченка',
+  restorationOfMonument: 'реставрація пам’ятки архітектури',
 };
