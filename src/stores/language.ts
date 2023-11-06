@@ -12,25 +12,26 @@ export enum LanguagesEnum {
 
 export const AppLanguages = [
   {
+    label: "Укр",
+    quasarLangName: "uk",
+    value: LanguagesEnum.UA,
+  },
+  {
     label: "Eng",
     quasarLangName: "en-US",
     value: LanguagesEnum.EN,
   },
   {
-    label: "Укр",
-    quasarLangName: "uk",
-    value: LanguagesEnum.UA,
+    label: "DEU",
+    quasarLangName: "deu",
+    value: LanguagesEnum.DEU,
   },
   {
     label: "PLN",
     quasarLangName: "pl",
     value: LanguagesEnum.PL,
   },
-  {
-    label: "DEU",
-    quasarLangName: "deu",
-    value: LanguagesEnum.DEU,
-  }
+
 ];
 
 

@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import {useI18n} from "vue-i18n";
 import {AppLanguages, LanguagesEnum, useLanguageStore} from "stores/language";
-import {onMounted, ref, watch} from "vue";
+import { ref} from "vue";
 
 const { t } = useI18n();
 const languageStore = useLanguageStore();
-const lang = ref();
 
 const toggleLanguage = (value: LanguagesEnum ) => {
   languageStore.setLanguage({
@@ -36,25 +35,12 @@ const toggleLanguage = (value: LanguagesEnum ) => {
     </a>
 
     <div class="lang-btns-wrap flex no-wrap">
-      <q-btn v-for="(item, index) in AppLanguages" :key="index" flat class="lang-btn" @click="toggleLanguage(item.value)">
+      <q-btn
+        :class="{'active': lang === item.value}"
+        v-for="(item, index) in AppLanguages" :key="index" flat class="lang-btn" @click="toggleLanguage(item.value)">
         {{ item.label}}
       </q-btn>
 
-<!--      <q-btn flat class="lang-btn" @click="toggleLanguage('ua')">
-        Укр
-      </q-btn>
-
-      <q-btn flat class="lang-btn" @click="toggleLanguage('en')">
-        ENG
-      </q-btn>
-
-      <q-btn flat class="lang-btn">
-        DEU
-      </q-btn>
-
-      <q-btn flat class="lang-btn">
-        PLN
-      </q-btn>-->
     </div>
   </div>
 </template>

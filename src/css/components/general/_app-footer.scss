@@ -1,0 +1,31 @@
+@import "../../lib/mixins";
+
+.app-footer {
+  background: transparent;
+  @include align-center;
+  justify-content: space-between;
+  position: absolute;
+  padding: 30px 50px;
+  color: #9F9F9F;
+
+  &__text {
+    font-size: 15px;
+  }
+}
+
+.logo-wrap {
+  @include align-center;
+  &__icon {
+    width: 25px;
+    height: 37px;
+  }
+
+  &__text {
+    width: 87px;
+    height: 21px;
+  }
+}
+
+.copyright {
+  font-size: 11px;
+}

@@ -61,4 +61,5 @@ export default {
   restorationOfMonument: 'реставрація пам’ятки архітектури',
   contactsAddress: 'м. Львів, вул. Ак. Сахарова, 43, оф. 411',
   phone: 'тел.',
+  copyright: 'Всі права захищено ТОВ ПАРІУМ ҐРУП',
 };

@@ -78,6 +78,15 @@
   src: url(./fonts/Inter-BlackItalic.woff2);
 }
 
+@font-face {
+  font-family: RoundedMplus1c-Medium;
+  src: url(./fonts/RoundedMplus1c-Medium.woff2);
+}
+
+.ft-copyright {
+  font-family: 'RoundedMplus1c-Medium';
+}
+
 .ft-thin {
   font-family: 'Inter-Thin';
 }
