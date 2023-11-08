@@ -3,13 +3,29 @@
 
 .objects-section {
   @include align-column-center;
-  padding: 116px 175px 200px;
+  padding: 64px 16px 140px;
+
+  @include min-screen(md) {
+    padding: 116px 175px 200px;
+  }
 
   &__title {
-    margin-bottom: 72px;
-    font-size: 42px;
-    line-height: 43px;
-    letter-spacing: 14px;
+    margin-bottom: 15px;
+    font-size: 31px;
+    line-height: 29px;
+    letter-spacing: 12px;
+    text-align: center;
+
+    @media (min-width: 360px) {
+      font-size: 35px;
+      line-height: 31px;
+      letter-spacing: 14px;
+    }
+    @include min-screen(lg) {
+      margin-bottom: 72px;
+      font-size: 42px;
+      line-height: 43px;
+    }
   }
 }
 
@@ -19,10 +35,19 @@
 }
 
 .object {
-  padding: 48px 96px 20px 56px;
+  padding: 38px 0 0 16px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  flex-direction: column;
+
+  @media (min-width: 360px) {
+    padding: 48px 0 0 56px;
+  }
+  @include min-screen(md) {
+    padding: 48px 96px 20px 56px;
+    flex-direction: row;
+  }
 
   &--top {
     position: absolute;
@@ -40,41 +65,66 @@
   }
 
   &__img {
-    width: 289px;
-    height: 385px;
+    width: 275px;
+    height: 345px;
     position: relative;
+
+    @media (min-width: 360px) {
+      width: 289px;
+      height: 385px;
+    }
 
     &:after {
       content: '';
       position: absolute;
       left: 0;
       top: 0;
-      width: calc(100% + 71px);
+      width: calc(100% + 59px);
       height: 282px;
-      transform: translate(-54px, -48px);
+      transform: translate(-52px, -56px);
       background-image: url("src/assets/img/svg/objects-img-border.svg");
       background-repeat: no-repeat;
       background-size: 100% 100%;
+
+      @media (min-width: 360px) {
+        width: calc(100% + 71px);
+        height: 282px;
+        transform: translate(-54px, -48px);
+      }
     }
 
     &--wide {
-      width: 416px;
-      height: 312px;
+      width: 260px;
+      height: 212px;
+
+      @include min-screen(xs) {
+        width: 416px;
+        height: 312px;
+      }
 
       &:after {
-        width: calc(100% + 56px);
-        transform: translate(-111px, -48px);
+        width: 100%;
+        transform: translate(-40px, -75px);
+
+        @include min-screen(xs) {
+          width: calc(100% + 56px);
+          transform: translate(-111px, -48px);
+        }
       }
     }
   }
 
   &__toggle {
     text-align: right;
-    transform: translateY(15px);
+    transform: translateY(66px);
     color: #C2C2C2;
     margin-left: auto;
     font-family: $light;
     transition: $transition;
+
+    @include min-screen(md) {
+      transform: translateY(15px);
+    }
 
     &:hover {
       color: #fff;
@@ -87,7 +137,11 @@
     }
 
     &__subtitle {
-      font-size: 14px;
+      font-size: 12px;
+
+      @media (min-width: 360px) {
+        font-size: 16px;
+      }
     }
   }
 
@@ -95,10 +149,15 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 330px;
+    width: 265px;
     height: 3px;
     background: #50599D;
-    transform: translate(-94px, 15px);
+    transform: translate(0, 85px);
+
+    @include min-screen(md) {
+      width: 330px;
+      transform: translate(-94px, 15px);
+    }
 
     span {
       display: block;
@@ -117,27 +176,52 @@
     .object {
       &__toggle {
         color: #fff;
+        transform: translateY(44px);
+
+        @include min-screen(md) {
+          transform: translateY(15px);
+        }
 
         &__title {
           font-family: $bold;
-          font-size: 29px;
-          margin-bottom: 10px;
-          line-height: 35px;
+          font-size: 28px;
+          margin-bottom: 1px;
+          line-height: 1;
+
+          @include min-screen(sm) {
+            font-size: 29px;
+            margin-bottom: 10px;
+            line-height: 35px;
+          }
         }
 
         &__subtitle {
-          font-size: 18px;
+          font-size: 14px;
+
+          @media (min-width: 360px) {
+            font-size: 16px;
+          }
+          @include min-screen(md) {
+            font-size: 18px;
+          }
         }
       }
 
       &__line {
-        background-image: url("src/assets/img/svg/toggle-line.svg");
+        background-image: url("src/assets/img/svg/toggle-line-mobile.svg");
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        width: 587px;
-        height: 156px;
-        transform: translate(-81px, 25px);
+        width: 282px;
+        height: 121px;
+        transform: translate(0, 68px);
         background-color: transparent;
+
+        @include min-screen(md) {
+          width: 587px;
+          height: 156px;
+          transform: translate(-81px, 25px);
+          background-image: url("src/assets/img/svg/toggle-line.svg");
+        }
 
         span {
           display: none;

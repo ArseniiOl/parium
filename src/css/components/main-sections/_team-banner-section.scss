@@ -1,20 +1,42 @@
+@import "../../lib/mixins";
+
 .team-banner {
-  height: 648px;
+  height: 100vh;
   background-image: url("src/assets/img/team-banner.png");
   background-repeat: no-repeat;
-  background-size: 100%;
-  padding: 64px 70px;
+  background-size: cover;
+  background-position: center;
+  padding: 28px 25px;
+
+  @media (min-width: 360px) {
+    padding: 38px 35px;
+  }
+  @include min-screen(md) {
+    height: 648px;
+    background-size: 100%;
+    padding: 64px 70px;
+  }
 
   &__logo {
     &__icon {
-      width: 55px;
-      height: 67px;
+      width: 45px;
+      height: 64px;
       margin-right: 15px;
+
+      @include min-screen(xs) {
+        width: 55px;
+        height: 67px;
+      }
     }
 
     &__text {
       line-height: 17px;
+      font-size: 12px;
       letter-spacing: 2px;
+
+      @media (min-width: 360px) {
+        font-size: 14px;
+      }
     }
   }
 }

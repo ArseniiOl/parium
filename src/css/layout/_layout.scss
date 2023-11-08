@@ -123,6 +123,13 @@
 }
 
 .footer-section {
-  background: linear-gradient(180deg, rgba(53,61,121,1) 0%,  rgba(0,0,0,1) 100%);
- // margin-top: -48px;
+  background:url("src/assets/img/footer-img-mob.png"), linear-gradient(180deg, rgba(53,61,121,1) 0%,  rgba(0,0,0,1) 100%) ;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-blend-mode: darken;
+
+  @include min-screen(sm) {
+    background: linear-gradient(180deg, rgba(53,61,121,1) 0%,  rgba(0,0,0,1) 100%);
+    background-blend-mode: unset;
+  }
 }
