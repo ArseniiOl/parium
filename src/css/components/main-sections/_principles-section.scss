@@ -1,37 +1,67 @@
 @import "../../lib/var";
+@import "../../lib/mixins";
 @import "../../lib/animation";
 
 .principles-section {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.44) 0%, rgba(0, 0, 0, 0) 100%);
-  padding: 97px 153px 226px 147px;
+  padding: 97px 30px 135px;
+
+  @include min-screen(md) {
+    padding: 97px 153px 226px 147px;
+  }
 
   &__title {
     margin: 0;
     letter-spacing: 15px;
-    font-size: 30px;
-    line-height: 73px;
+    font-size: 26px;
+    line-height: 31px;
+    text-align: center;
+    margin-bottom: 12px;
+
+    @include min-screen(md) {
+      font-size: 30px;
+      line-height: 73px;
+      margin-bottom: 0;
+    }
   }
 
   &__notice {
-    margin-bottom: 50px;
-    font-size: 20px;
-    line-height: 22px;
+    margin-bottom: 54px;
+    font-size: 17px;
+    line-height: 23px;
     color: #4E5694;
+
+    @include min-screen(md) {
+      margin-bottom: 50px;
+      font-size: 20px;
+      line-height: 22px;
+    }
   }
 
   &__quote {
-    padding: 15px 121px;
-    font-size: 20px;
-    line-height: 30px;
+    padding: 15px 45px;
+    font-size: 15px;
+    line-height: 22px;
     text-align: center;
+
+    @include min-screen(md) {
+      padding: 15px 121px;
+      font-size: 20px;
+      line-height: 30px;
+    }
 
     &:before, &:after {
       content: '';
       position: absolute;
-      width: 37px;
-      height: 30px;
+      width: 27px;
+      height: 20px;
       background-repeat: no-repeat;
       background-size: 100%;
+
+      @include min-screen(xs) {
+        width: 37px;
+        height: 30px;
+      }
     }
 
     &:before {
@@ -54,14 +84,25 @@
 
 .principles {
   width: 100%;
-  margin-bottom: 120px;
+  margin-bottom: 90px;
+
+  @include min-screen(md) {
+    margin-bottom: 120px;
+  }
 }
 
 .principles-item {
   border-radius: 24px;
   margin-bottom: 30px;
   border: 3px solid #4E5694;
-  padding: 38px 47px 20px 75px;
+  padding: 17px 10px 20px 28px;
+
+  @media (min-width: 360px) {
+    padding: 27px 20px 31px 38px;
+  }
+  @include min-screen(md) {
+    padding: 38px 47px 20px 75px;
+  }
 
   &__head {
     width: 100%;
@@ -70,10 +111,18 @@
   &__title {
     font-family: $medium;
     text-transform: uppercase;
-    font-size: 47px;
-    margin-bottom: 13px;
+    font-size: 33px;
+    margin-bottom: 7px;
     line-height: 30px;
     color: #A8A9AD;
+
+    @media (min-width: 360px) {
+      font-size: 47px;
+      line-height: 30px;
+    }
+    @include min-screen(md) {
+      margin-bottom: 13px;
+    }
   }
 
   &__notice {
@@ -82,19 +131,39 @@
     font-family: $extra-light;
     font-size: 11px;
     line-height: 12px;
+
+    @media (min-width: 360px) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+    @include min-screen(md) {
+      font-size: 11px;
+      line-height: 12px;
+    }
   }
 
   &__text {
     background: transparent;
     color: #D9D9D9;
-    font-size: 13px;
-    line-height: 27px;
+    font-size: 12px;
+    line-height: 19px;
+    padding-top: 20px;
 
-    padding-left: 250px;
-    margin-top: -80px;
-    padding-right: 140px;
     animation: moveInBottom .5s ease-out .25s;
     animation-fill-mode: backwards;
+
+    @media (min-width: 360px) {
+      font-size: 14px;
+      line-height: 25px;
+    }
+    @include min-screen(md) {
+      margin-top: -80px;
+      padding-left: 250px;
+      padding-top: 0;
+      font-size: 13px;
+      line-height: 27px;
+      padding-right: 140px;
+    }
   }
 
   &--1 {
