@@ -3,21 +3,35 @@
 .app-footer {
   background: transparent;
   @include align-center;
-  justify-content: space-between;
+  justify-content: center;
   position: absolute;
-  padding: 30px 50px;
+  padding: 0 30px 20px;
   color: #9F9F9F;
+  flex-direction: column;
+
+  @include min-screen(md) {
+    padding: 30px 50px;
+    justify-content: space-between;
+    flex-direction: row;
+  }
 
   &__text {
     font-size: 15px;
+    letter-spacing: 2px;
   }
 }
 
 .logo-wrap {
   @include align-center;
+
   &__icon {
     width: 25px;
     height: 37px;
+    margin-bottom: 14px;
+
+    @include min-screen(sm) {
+      margin-bottom: 0;
+    }
   }
 
   &__text {
@@ -28,4 +42,9 @@
 
 .copyright {
   font-size: 11px;
+  margin-bottom: 8px;
+
+  @include min-screen(sm) {
+    margin-bottom: 0;
+  }
 }
