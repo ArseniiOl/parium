@@ -2,13 +2,22 @@
 
 .team-section {
   background: linear-gradient(180deg, #747474 0%, #C5C5C5 100%);
-  padding: 64px 105px 0;
+  padding: 64px 30px 0;
+
+  @include min-screen(sm) {
+    padding: 64px 105px 0;
+  }
 
   &__title {
     margin: 0;
-    font-size: 30px;
-    line-height: 73px;
+    font-size: 26px;
+    line-height: 1;
     letter-spacing: 15px;
+
+    @include min-screen(md) {
+      font-size: 30px;
+      line-height: 73px;
+    }
   }
 }
 
@@ -17,8 +26,15 @@
 }
 
 .team-slider {
-  height: 596px;
+  height: 850px;
   background: transparent;
+  padding-bottom: 150px;
+
+  @include min-screen(md) {
+    height: 596px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 
   &__slide {
     padding: 0;
@@ -26,37 +42,70 @@
 
   &__slide-wrap {
     display: flex;
-    padding-top: 58px;
+    padding-top: 50px;
     align-items: center;
+    flex-direction: column;
+
+    @include min-screen(md) {
+      padding-top: 58px;
+      flex-direction: row;
+    }
   }
 
   &__wrap {
     @include align-center;
-    margin-right: 85px;
+
+    @include min-screen(lg) {
+      margin-right: 85px;
+    }
   }
 
   &__num {
-    font-size: 150px;
-    margin-right: 40px;
+    font-size: 90px;
+    margin-right: 5px;
     color: #4E5694;
+
+    @media (min-width: 360px) {
+      font-size: 120px;
+      margin-right: 20px;
+    }
+    @include min-screen(xl) {
+      font-size: 150px;
+      margin-right: 40px;
+    }
   }
 
   &__img {
-    width: 269px;
-    height: 279px;
+    width: 192px;
+    height: 190px;
     position: relative;
+
+    @media (min-width: 360px) {
+      width: 232px;
+      height: 241px;
+    }
+    @include min-screen(xs) {
+      width: 269px;
+      height: 279px;
+    }
 
     &:after {
       content: '';
       position: absolute;
       left: 0;
       top: 0;
-      width: calc(100% + 50px);
-      height: calc(100% + 58px);
-      transform: translate(-50px, -58px);
+      width: calc(100% + 42px);
+      height: calc(100% + 50px);
+      transform: translate(-40px, -42px);
       background-image: url("src/assets/img/svg/team-img-border.svg");
       background-repeat: no-repeat;
       background-size: 100% 100%;
+
+      @include min-screen(md) {
+        width: calc(100% + 50px);
+        height: calc(100% + 58px);
+        transform: translate(-50px, -58px);
+      }
     }
 
     &:before {
@@ -65,30 +114,48 @@
       left: 0;
       top: 0;
       width: 100%;
-      height: calc(100% + 144px);
+      height: calc(100% + 120px);
       background-image: url("src/assets/img/team-slider-img.png");
       background-repeat: no-repeat;
       background-size: 100%;
+
+      @include min-screen(md) {
+        height: calc(100% + 144px);
+      }
     }
   }
 
   &__text {
     color: #2D2D2D;
-    max-width: 40%;
+    margin-top: 90px;
+
+    @include min-screen(sm) {
+      max-width: 40%;
+      margin-top: 0;
+    }
 
     &__title {
       color: #4E5694;
       text-transform: uppercase;
-      letter-spacing: 11px;
-      font-size: 31px;
+      letter-spacing: 9px;
+      font-size: 26px;
       line-height: 27px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
+
+      @include min-screen(md) {
+        letter-spacing: 11px;
+        font-size: 31px;
+        margin-bottom: 20px;
+      }
 
       &--sm {
         font-size: 24px;
         text-transform: capitalize;
         letter-spacing: unset;
-        max-width: 55%;
+
+        @include min-screen(sm) {
+          max-width: 55%;
+        }
       }
     }
 
@@ -98,7 +165,11 @@
 
     p {
       + p {
-        margin-top: 20px;
+        margin-top: 15px;
+
+        @include min-screen(xl) {
+          margin-top: 20px;
+        }
       }
     }
   }
@@ -111,6 +182,11 @@
     left: 0;
     opacity: .49;
     transform: translateY(200%);
+    display: none;
+
+    @include min-screen(lg) {
+      display: block;
+    }
 
     &:after {
       content: '';
@@ -124,10 +200,17 @@
   }
 
   &__control {
-    bottom: 110px;
-    right: -35px;
+    bottom: 0;
+    right: 50%;
     display: flex;
-    flex-direction: column;
+
+    transform: translate(70%, -25%);
+
+    @include min-screen(xs) {
+      bottom: 110px;
+      right: -35px;
+      flex-direction: column;
+    }
 
     &__btn {
       padding: 0;
@@ -142,8 +225,11 @@
       }
 
       &--prev {
-        margin-bottom: 15px;
         transform: rotate(180deg);
+
+        @include min-screen(sm) {
+          margin-bottom: 15px;
+        }
 
         &:hover {
           transform: rotate(180deg) translateY(10px);
