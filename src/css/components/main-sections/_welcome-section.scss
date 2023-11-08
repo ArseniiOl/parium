@@ -1,25 +1,49 @@
 @import "../../lib/var";
+@import "../../lib/mixins";
 
 .welcome-section {
   height: 100vh;
-  padding: 180px 58px 0;
+  padding: 90px 33px 0 47px;
+
+  @media (min-width: 360px) {
+    padding: 161px 33px 0 47px;
+  }
+  @include min-screen(md) {
+    padding: 180px 58px 0;
+  }
 
   &__wrap {
     z-index: 1;
-    max-width: 50%;
+
     margin-top: auto;
     animation: moveInBottom .3s ease-out .25s;
     animation-fill-mode: backwards;
     position: absolute;
     bottom: 14%;
-    left: 58px;
+    left: 5%;
+
+    @media (min-width: 360px) {
+      left: 47px;
+    }
+    @include min-screen(md) {
+      max-width: 50%;
+      left: 58px;
+    }
   }
 
   &__text {
-    max-width: 50%;
-    font-size: 20px;
-    line-height: 25px;
+    max-width: 90%;
+    font-size: 15px;
+    line-height: 20px;
 
+    @media (min-width: 360px) {
+      font-size: 18px;
+      line-height: 25px;
+    }
+    @include min-screen(md) {
+      max-width: 50%;
+      font-size: 20px;
+    }
   }
 }
 
@@ -30,6 +54,10 @@
   height: 100%;
   width: 100%;
   background: transparent;
+
+  &__img {
+    height: 100%;
+  }
 }
 
 .main-nav {
@@ -46,17 +74,27 @@
   &__item {
    align-items: center;
     min-height: 40px;
-    min-width: 175px;
-    padding: 8px 24px 8px 4px;
-    font-size: 15px;
+    min-width: 140px;
+    padding: 8px 4px 8px 4px;
+    font-size: 17px;
     font-family: $light;
     cursor: pointer;
     transition: $transition;
     width: fit-content;
 
+    @include min-screen(md) {
+      min-width: 175px;
+      padding: 8px 24px 8px 4px;
+      font-size: 15px;
+    }
+
     .q-icon {
       font-size: 31px;
-      margin-right: 32px;
+      margin-right: 17px;
+
+      @include min-screen(md) {
+        margin-right: 32px;
+      }
     }
 
     &:hover {
@@ -66,8 +104,17 @@
 }
 
 .app-title {
-  margin: 0 0 22px;
-  font-size: 84px;
+  margin: 0 0 26px;
+  font-size: 60px;
+  line-height: 55px;
 
-  line-height: 70px;
+  @media (min-width: 360px) {
+    font-size: 80px;
+
+    line-height: 70px;
+  }
+  @include min-screen(md) {
+    margin: 0 0 22px;
+    font-size: 84px;
+  }
 }

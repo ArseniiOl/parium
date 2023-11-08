@@ -3,22 +3,57 @@
 
 .app-header {
   &__wrap {
+    padding: 17px 23px;
+
     @include min-screen(lg) {
       padding: 43px 58px;
     }
   }
 
   &__social {
-    height: 46px;
-    @include align-justify-center;
-    padding: 4px 16px;
-    border-radius: 9px;
-    transition: $transition;
-    border: 1px solid transparent;
     animation: moveInRight 1s ease-out;
 
-    &:hover {
-      border-color: $clr-ntrl-min;
+    &__link {
+      position: absolute;
+      padding: 4px 6px;
+      border-radius: 9px;
+      transition: $transition;
+      border: 1px solid $clr-ntrl-min;
+      height: 46px;
+      @include align-justify-center;
+      right: 55px;
+      top: 25px;
+      animation: moveInRight 1s ease-out;
+
+      @media (min-width: 360px) {
+        padding: 4px 16px;
+      }
+      @include min-screen(md) {
+        display: flex !important;
+        position: relative;
+        width: auto;
+        animation: none;
+        top: 0;
+        right: unset;
+        border: 1px solid transparent;
+      }
+
+      &:hover {
+        border-color: $clr-ntrl-min;
+      }
+    }
+
+    &__icon {
+      font-size: 25px;
+      padding: 0;
+
+      @include min-screen(md) {
+        display: none;
+      }
+
+      &.active {
+        color: rgba(255, 255, 255, 0.5);
+      }
     }
   }
 }
@@ -29,12 +64,25 @@
   animation-timing-function: ease-out;
 
   &__icon {
-    width: 85px;
-    height: 94px;
+    width: 50px;
+    height: 58px;
+
+    @include min-screen(md) {
+      width: 85px;
+      height: 94px;
+    }
   }
 
   &__text {
-    width: 244px;
-    height: 83px;
+    width: 179px;
+    height: 52px;
+    margin-left: -15px;
+
+    @include min-screen(md) {
+      width: 244px;
+      height: 83px;
+      margin-left: 0;
+      display: block !important;
+    }
   }
 }

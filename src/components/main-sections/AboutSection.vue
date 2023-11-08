@@ -12,7 +12,7 @@ import AccuracySvg from "components/icons/AccuracySvg.vue";
 
 const { t } = useI18n();
 const slider = ref(1);
-const autoplay = ref(true);
+const autoplay = ref(false);
 </script>
 
 <template>
@@ -151,7 +151,7 @@ const autoplay = ref(true);
           </div>
         </div>
 
-        <div class="timeline__item timeline__item--3">
+        <div class="timeline__item timeline__item--4">
           <div class="timeline__item__img">
             <q-img fetchpriority="low" src="~assets/img/timeline-img-3.png" alt="construction-3" />
 
@@ -182,20 +182,25 @@ const autoplay = ref(true);
         class="about-slider"
       >
         <q-carousel-slide :name="1">
-          <div class="flex no-wrap about-slider__wrap">
+          <div class="flex no-wrap about-slider__wrap" v-if="$q.screen.xl || $q.screen.lg || $q.screen.md">
             <div class="about-slider__img">
               <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
             </div>
             <div class="about-slider__img">
               <q-img fetchpriority="high" src="~assets/img/about-slider-img-2.png" alt="img-2" />
             </div>
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
+            </div>
+          </div>
+          <div class="flex no-wrap about-slider__wrap" v-else>
             <div class="about-slider__img">
               <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
             </div>
           </div>
         </q-carousel-slide>
         <q-carousel-slide :name="2">
-          <div class="flex no-wrap about-slider__wrap">
+          <div class="flex no-wrap about-slider__wrap" v-if="$q.screen.xl || $q.screen.lg || $q.screen.md">
             <div class="about-slider__img">
               <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
             </div>
@@ -206,28 +211,43 @@ const autoplay = ref(true);
               <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
             </div>
           </div>
+          <div class="flex no-wrap about-slider__wrap" v-else>
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-2.png" alt="img-2" />
+            </div>
+          </div>
         </q-carousel-slide>
         <q-carousel-slide :name="3">
-          <div class="flex no-wrap about-slider__wrap">
+          <div class="flex no-wrap about-slider__wrap" v-if="$q.screen.xl || $q.screen.lg || $q.screen.md">
             <div class="about-slider__img">
               <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
             </div>
             <div class="about-slider__img">
               <q-img fetchpriority="high" src="~assets/img/about-slider-img-2.png" alt="img-2" />
             </div>
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
+            </div>
+          </div>
+          <div class="flex no-wrap about-slider__wrap" v-else>
             <div class="about-slider__img">
               <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
             </div>
           </div>
         </q-carousel-slide>
         <q-carousel-slide :name="4">
-          <div class="flex no-wrap about-slider__wrap">
+          <div class="flex no-wrap about-slider__wrap" v-if="$q.screen.xl || $q.screen.lg || $q.screen.md">
             <div class="about-slider__img">
               <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
             </div>
             <div class="about-slider__img">
               <q-img fetchpriority="high" src="~assets/img/about-slider-img-2.png" alt="img-2" />
             </div>
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
+            </div>
+          </div>
+          <div class="flex no-wrap about-slider__wrap" v-else>
             <div class="about-slider__img">
               <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
             </div>
@@ -235,13 +255,18 @@ const autoplay = ref(true);
         </q-carousel-slide>
 
         <q-carousel-slide :name="5">
-          <div class="flex no-wrap about-slider__wrap">
+          <div class="flex no-wrap about-slider__wrap" v-if="$q.screen.xl || $q.screen.lg || $q.screen.md">
             <div class="about-slider__img">
               <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
             </div>
             <div class="about-slider__img">
               <q-img fetchpriority="high" src="~assets/img/about-slider-img-2.png" alt="img-2" />
             </div>
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
+            </div>
+          </div>
+          <div class="flex no-wrap about-slider__wrap" v-else>
             <div class="about-slider__img">
               <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
             </div>

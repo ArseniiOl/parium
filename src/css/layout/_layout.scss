@@ -1,5 +1,6 @@
 @import "../quasar.variables";
 @import "../lib/var";
+@import "../lib/mixins";
 
 .q-page-container {
   padding-top: 0 !important;
@@ -13,7 +14,11 @@
     }
 
     &__control {
-      bottom: 25px;
+      bottom: 34px;
+
+      @include min-screen(md) {
+        bottom: 25px;
+      }
     }
 
     &__navigation {
@@ -54,8 +59,14 @@
 .about-slider {
   .q-carousel {
     &__slide {
-      height: 420px;
+      height: 380px;
       padding: 0;
+      padding-bottom: 30px !important;
+
+      @include min-screen(md) {
+        height: 420px;
+        padding-bottom: 60px !important;
+      }
     }
 
     &__control {
