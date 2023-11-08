@@ -34,7 +34,7 @@ const toggleLanguage = (value: LanguagesEnum ) => {
       parium.group@gmail.com
     </a>
 
-    <div class="lang-btns-wrap flex no-wrap">
+    <div class="lang-btns-wrap flex">
       <q-btn
         :class="{'active': lang === item.value}"
         v-for="(item, index) in AppLanguages" :key="index" flat class="lang-btn" @click="toggleLanguage(item.value)">

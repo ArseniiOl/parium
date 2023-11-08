@@ -3,20 +3,34 @@
 @import "../../quasar.variables";
 
 .contacts {
-  padding: 100px 52px 188px;
+  padding: 140px 32px 120px;
+
+  @media (min-width: 360px) {
+    padding: 140px 52px 120px;
+  }
+  @include min-screen(md) {
+    padding: 100px 52px 188px;
+  }
 
   &__title {
     margin-top: 0;
-    margin-bottom: 74px;
-    font-size: 30px;
+    margin-bottom: 86px;
+    font-size: 28px;
     line-height: 73px;
     letter-spacing: 17px;
+
+    @include min-screen(md) {
+      margin-bottom: 74px;
+      font-size: 30px;
+      letter-spacing: 17px;
+    }
   }
 
   &__text {
     margin-bottom: 42px;
     font-size: 16px;
     line-height: 19px;
+    text-align: center;
   }
 
   &__link {
@@ -39,10 +53,18 @@
   }
 
   &__mail {
-    margin-bottom: 135px;
-    font-size: 19px;
-    letter-spacing: 5px;
+    margin-bottom: 120px;
+    font-size: 15px;
+    letter-spacing: 3px;
     transition: $transition;
+
+    @media (min-width: 360px) {
+      font-size: 19px;
+      letter-spacing: 5px;
+    }
+    @include min-screen(md) {
+      margin-bottom: 135px;
+    }
 
     &:hover {
       letter-spacing: 3px;
@@ -55,6 +77,11 @@
   justify-content: space-between;
   max-width: 570px;
   width: 100%;
+  flex-wrap: wrap;
+
+  @include min-screen(sm) {
+    flex-wrap: nowrap;
+  }
 }
 
 .lang-btn {
@@ -65,6 +92,11 @@
   height: 61px;
   border-radius: 12px;
   transition: $transition;
+  margin-bottom: 44px;
+
+  @include min-screen(md) {
+    margin-bottom: 0;
+  }
 
   &.active {
     font-family: $extra-bold;
