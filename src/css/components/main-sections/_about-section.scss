@@ -207,9 +207,11 @@
     }
     @include min-screen(md) {
       margin-bottom: 38px;
+      max-width: 55%;
+    }
+    @include min-screen(lg) {
       font-size: 53px;
       line-height: 49px;
-      max-width: 55%;
     }
   }
 
@@ -304,6 +306,7 @@
     padding-left: 120px;
     padding-right: 200px;
     flex-direction: row;
+    max-width: 1440px;
   }
 
   &:before {

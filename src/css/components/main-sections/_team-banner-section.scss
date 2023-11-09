@@ -13,8 +13,10 @@
   }
   @include min-screen(md) {
     height: 648px;
-    background-size: 100%;
     padding: 64px 70px;
+  }
+  @include min-screen(lg) {
+    background-size: 100%;
   }
 
   &__logo {

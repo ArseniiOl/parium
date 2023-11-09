@@ -67,7 +67,7 @@
     width: 50px;
     height: 58px;
 
-    @include min-screen(md) {
+    @include min-screen(lg) {
       width: 85px;
       height: 94px;
     }
@@ -79,10 +79,12 @@
     margin-left: -15px;
 
     @include min-screen(md) {
+      display: block !important;
+    }
+    @include min-screen(lg) {
       width: 244px;
       height: 83px;
       margin-left: 0;
-      display: block !important;
     }
   }
 }

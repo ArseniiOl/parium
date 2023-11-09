@@ -6,6 +6,9 @@
   padding: 64px 16px 140px;
 
   @include min-screen(md) {
+    padding: 106px 85px 170px;
+  }
+  @include min-screen(lg) {
     padding: 116px 175px 200px;
   }
 

@@ -88,6 +88,7 @@
 
   @include min-screen(md) {
     margin-bottom: 120px;
+    max-width: 1400px;
   }
 }
 
@@ -100,8 +101,11 @@
   @media (min-width: 360px) {
     padding: 27px 20px 31px 38px;
   }
-  @include min-screen(md) {
+  @include min-screen(lg) {
     padding: 38px 47px 20px 75px;
+  }
+  @include min-screen(xxl) {
+    min-height: 140px;
   }
 
   &__head {
@@ -160,10 +164,14 @@
     }
     @include min-screen(md) {
       margin-top: -80px;
-      padding-left: 250px;
+      padding-left: 200px;
       padding-top: 0;
       font-size: 13px;
       line-height: 27px;
+      padding-right: 80px;
+    }
+    @include min-screen(lg) {
+      padding-left: 250px;
       padding-right: 140px;
     }
   }

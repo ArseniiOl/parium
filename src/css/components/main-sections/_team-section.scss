@@ -35,7 +35,8 @@
     margin-bottom: 0;
     padding-bottom: 0;
   }
-  @include min-screen(md) {
+
+  @include min-screen(lg) {
     height: 596px;
   }
 
@@ -203,6 +204,9 @@
       height: 128px;
     }
     @include min-screen(md) {
+      height: 132px;
+    }
+    @include min-screen(lg) {
       height: 129px;
     }
 

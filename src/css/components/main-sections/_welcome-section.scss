@@ -9,6 +9,9 @@
     padding: 161px 33px 0 47px;
   }
   @include min-screen(md) {
+    padding: 140px 58px 0;
+  }
+  @include min-screen(lg) {
     padding: 180px 58px 0;
   }
 
@@ -41,6 +44,9 @@
       line-height: 25px;
     }
     @include min-screen(md) {
+      max-width: 70%;
+    }
+    @include min-screen(lg) {
       max-width: 50%;
       font-size: 20px;
     }
@@ -114,6 +120,11 @@
   }
   @include min-screen(md) {
     margin: 0 0 22px;
+    font-size: 64px;
+    line-height: 60px;
+  }
+  @include min-screen(lg) {
     font-size: 84px;
+    line-height: 70px;
   }
 }
