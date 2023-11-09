@@ -36,7 +36,7 @@ const toggleLanguage = (value: LanguagesEnum ) => {
 
     <div class="lang-btns-wrap flex">
       <q-btn
-        :class="{'active': lang === item.value}"
+        :class="{'active': languageStore.getLanguage?.value === item.value}"
         v-for="(item, index) in AppLanguages" :key="index" flat class="lang-btn" @click="toggleLanguage(item.value)">
         {{ item.label}}
       </q-btn>

@@ -28,7 +28,7 @@
       @media (min-width: 360px) {
         padding: 4px 16px;
       }
-      @include min-screen(md) {
+      @include min-screen(sm) {
         display: flex !important;
         position: relative;
         width: auto;
@@ -47,7 +47,7 @@
       font-size: 25px;
       padding: 0;
 
-      @include min-screen(md) {
+      @include min-screen(sm) {
         display: none;
       }
 

@@ -9,7 +9,7 @@
   color: #9F9F9F;
   flex-direction: column;
 
-  @include min-screen(md) {
+  @include min-screen(sm) {
     padding: 30px 50px;
     justify-content: space-between;
     flex-direction: row;

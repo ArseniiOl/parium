@@ -75,12 +75,13 @@
 
 .lang-btns-wrap {
   justify-content: space-between;
-  max-width: 570px;
+  max-width: 300px;
   width: 100%;
   flex-wrap: wrap;
 
   @include min-screen(sm) {
     flex-wrap: nowrap;
+    max-width: 570px;
   }
 }
 

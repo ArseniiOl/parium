@@ -37,16 +37,17 @@
 .object {
   padding: 38px 0 0 16px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
   flex-direction: column;
 
   @media (min-width: 360px) {
     padding: 48px 0 0 56px;
   }
-  @include min-screen(md) {
+  @include min-screen(sm) {
     padding: 48px 96px 20px 56px;
     flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
   }
 
   &--top {
@@ -97,6 +98,10 @@
       width: 260px;
       height: 212px;
 
+      @media (min-width: 360px) {
+        width: 300px;
+        height: 225px;
+      }
       @include min-screen(xs) {
         width: 416px;
         height: 312px;
@@ -106,6 +111,9 @@
         width: 100%;
         transform: translate(-40px, -75px);
 
+        @media (min-width: 360px) {
+          transform: translate(-46px, -64px);
+        }
         @include min-screen(xs) {
           width: calc(100% + 56px);
           transform: translate(-111px, -48px);
@@ -122,8 +130,12 @@
     font-family: $light;
     transition: $transition;
 
-    @include min-screen(md) {
+    @media (min-width: 420px) {
+      margin-right: 50px;
+    }
+    @include min-screen(sm) {
       transform: translateY(15px);
+      margin-right: 0;
     }
 
     &:hover {
@@ -154,7 +166,10 @@
     background: #50599D;
     transform: translate(0, 85px);
 
-    @include min-screen(md) {
+    @media (min-width: 420px) {
+      transform: translate(-20%, 85px);
+    }
+    @include min-screen(sm) {
       width: 330px;
       transform: translate(-94px, 15px);
     }
@@ -178,7 +193,7 @@
         color: #fff;
         transform: translateY(44px);
 
-        @include min-screen(md) {
+        @include min-screen(sm) {
           transform: translateY(15px);
         }
 
@@ -198,10 +213,10 @@
         &__subtitle {
           font-size: 14px;
 
-          @media (min-width: 360px) {
+          @media (min-width: 430px) {
             font-size: 16px;
           }
-          @include min-screen(md) {
+          @include min-screen(sm) {
             font-size: 18px;
           }
         }
@@ -216,7 +231,12 @@
         transform: translate(0, 68px);
         background-color: transparent;
 
-        @include min-screen(md) {
+        @media (min-width: 420px) {
+          transform: translate(-20%, 88px);
+          height: 151px;
+          width: 292px;
+        }
+        @include min-screen(sm) {
           width: 587px;
           height: 156px;
           transform: translate(-81px, 25px);
