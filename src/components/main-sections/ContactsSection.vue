@@ -24,9 +24,9 @@ const toggleLanguage = (value: LanguagesEnum ) => {
       {{ t('contactsAddress')}}
     </p>
 
-    <a class="contacts__link ft-medium-italic" href="tel:+380673432011">
+    <a class="contacts__link ft-medium-italic" href="tel:+380673422011">
       {{ t('phone')}} <span>
-      +38 (067) 343 20 11
+      +38 (067) 342 20 11
     </span>
     </a>
 

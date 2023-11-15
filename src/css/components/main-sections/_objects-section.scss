@@ -14,12 +14,12 @@
 
   &__title {
     margin-bottom: 15px;
-    font-size: 31px;
-    line-height: 29px;
-    letter-spacing: 12px;
+    font-size: 27px;
+    line-height: 25px;
+    letter-spacing: 10px;
     text-align: center;
 
-    @media (min-width: 360px) {
+    @media (min-width: 420px) {
       font-size: 35px;
       line-height: 31px;
       letter-spacing: 14px;

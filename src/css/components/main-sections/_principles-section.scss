@@ -12,12 +12,15 @@
 
   &__title {
     margin: 0;
-    letter-spacing: 15px;
+    letter-spacing: 13px;
     font-size: 26px;
     line-height: 31px;
     text-align: center;
     margin-bottom: 12px;
 
+    @media (min-width: 420px) {
+      letter-spacing: 15px;
+    }
     @include min-screen(sm) {
       font-size: 30px;
       line-height: 73px;
@@ -96,7 +99,7 @@
   border-radius: 24px;
   margin-bottom: 30px;
   border: 3px solid #4E5694;
-  padding: 17px 10px 20px 28px;
+  padding: 17px 10px 20px 18px;
 
   @media (min-width: 360px) {
     padding: 27px 20px 31px 38px;
@@ -115,12 +118,16 @@
   &__title {
     font-family: $medium;
     text-transform: uppercase;
-    font-size: 33px;
+    font-size: 29px;
     margin-bottom: 7px;
-    line-height: 30px;
+    line-height: 26px;
     color: #A8A9AD;
 
-    @media (min-width: 360px) {
+    @media (min-width: 420px) {
+      font-size: 39px;
+      line-height: 23px;
+    }
+    @include min-screen(sm) {
       font-size: 47px;
       line-height: 30px;
     }

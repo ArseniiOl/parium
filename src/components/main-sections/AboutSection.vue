@@ -12,7 +12,7 @@ import AccuracySvg from "components/icons/AccuracySvg.vue";
 
 const { t } = useI18n();
 const slider = ref(1);
-const autoplay = ref(false);
+const autoplay = ref(true);
 </script>
 
 <template>

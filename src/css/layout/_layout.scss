@@ -106,7 +106,7 @@
 
 .menu-btn {
   position: fixed;
-  top: 30px;
+  top: 32px;
   right: 70px;
   z-index: 9999;
   padding: 0;
@@ -121,20 +121,95 @@
   &__icon {
     position: relative;
     transform: rotate(0deg);
-    transition: .4s ease-in-out;
+    transition: .2s ease-in-out;
     width: 25px;
     height: 25px;
 
     span {
       display: block;
       position: absolute;
-      height: 3px;
+      height: 2px;
       width: 25px;
       background: #fff;
       opacity: 1;
       left: 0;
       transform: rotate(0deg);
       transition: .25s ease-in-out;
+
+      &:nth-child(1) {
+        top: 1px;
+        -webkit-transform-origin: left center;
+        -moz-transform-origin: left center;
+        -o-transform-origin: left center;
+        transform-origin: left center;
+      }
+
+      &:nth-child(2) {
+        top: 10px;
+        -webkit-transform-origin: left center;
+        -moz-transform-origin: left center;
+        -o-transform-origin: left center;
+        transform-origin: left center;
+      }
+
+      &:nth-child(3) {
+        top: 20px;
+        -webkit-transform-origin: left center;
+        -moz-transform-origin: left center;
+        -o-transform-origin: left center;
+        transform-origin: left center;
+      }
+    }
+
+    &.active {
+      span {
+        &:nth-child(1) {
+          -webkit-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+          top: 3px;
+          left: 8px;
+        }
+
+        &:nth-child(2) {
+          width: 0%;
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          -webkit-transform: rotate(-45deg);
+          -moz-transform: rotate(-45deg);
+          -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+          top: 21px;
+          left: 8px;
+        }
+      }
+    }
+  }
+}
+
+.menu-btn-drop {
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  border-radius: 0;
+  background: linear-gradient(180deg, #131111 0%, rgba(19, 17, 17, 0.57) 50%, #000000 100%);
+  backdrop-filter: blur(5px);
+  box-shadow: none;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw;
+  height: 100vh;
+
+  &__list {
+    padding-top: 132px;
+    padding-right: 24px;
+
+    .main-nav {
+      &__list {
+        margin-left: auto;
+      }
     }
   }
 }

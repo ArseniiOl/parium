@@ -66,6 +66,7 @@
   &.active {
     background: rgba(0, 0, 0, 0.5) !important;
     box-shadow: 0 0 69px 44px rgba(0, 0, 0, 0.5);
+    z-index: 7000;
 
     @include min-screen(sm) {
       background: transparent !important;
@@ -84,6 +85,7 @@
       &__icon {
         width: 45px;
         height: 43px;
+        z-index: 99999;
 
         @include min-screen(sm) {
           width: 50px;

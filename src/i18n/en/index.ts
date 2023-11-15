@@ -30,7 +30,7 @@ export default {
   principlesText1: 'Success through ',
   principlesText2: 'Quality.',
   principlesText3: 'Reliability  ',
-  principlesText4: 'through Experience',
+  principlesText4: 'through Experience.',
   goal: 'GOAL',
   goalNotice: 'new quality of life and development of the city',
   goalText: 'of our activity is not only to create or renovate objects, but to ensure a new quality of life and development in the city, which, in our opinion, should be constantly updated and filled with new architectural forms.',

@@ -35,7 +35,6 @@
     margin-bottom: 0;
     padding-bottom: 0;
   }
-
   @include min-screen(lg) {
     height: 596px;
   }
@@ -151,11 +150,16 @@
     &__title {
       color: #4E5694;
       text-transform: uppercase;
-      letter-spacing: 9px;
-      font-size: 26px;
-      line-height: 27px;
+      letter-spacing: 7px;
+      font-size: 22px;
+      line-height: 23px;
       margin-bottom: 18px;
 
+      @media (min-width: 365px) {
+        font-size: 26px;
+        line-height: 27px;
+        letter-spacing: 9px;
+      }
       @include min-screen(md) {
         letter-spacing: 11px;
         font-size: 31px;

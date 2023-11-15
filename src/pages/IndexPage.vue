@@ -9,10 +9,12 @@ import ArrowRightSvg from "components/icons/ArrowRightSvg.vue";
 import {useI18n} from "vue-i18n";
 import {onMounted, ref} from "vue";
 import { scroll } from 'quasar'
-const { getScrollTarget, setVerticalScrollPosition } = scroll
-
 
 const { t } = useI18n();
+const navBtn = ref(false);
+const menuState = ref(false);
+
+const { getScrollTarget, setVerticalScrollPosition } = scroll
 
 const scrollToElement = (el: any) => {
   const target = getScrollTarget(el)
@@ -21,21 +23,15 @@ const scrollToElement = (el: any) => {
   setVerticalScrollPosition(target, offset, duration)
 }
 
-const navBtn = ref(false);
+const onScroll = (el: any) => {
+  let navPos = el.target.documentElement.scrollTop;
+
+  navBtn.value = navPos >= 100;
+}
 
 onMounted(() => {
   window.addEventListener('scroll', onScroll)
 });
-
-const onScroll = (el: any) => {
-  let navPos = el.target.documentElement.scrollTop;
-
-  if (navPos >= 100) {
-    navBtn.value = true
-  } else {
-    navBtn.value = false
-  }
-}
 </script>
 
 <template>
@@ -45,6 +41,7 @@ const onScroll = (el: any) => {
       class="menu-btn q-ml-auto"
       flat
       no-caps
+      v-model="menuState"
       dropdown-icon="none"
       transition-hide="slide-top"
       transition-duration="550"
@@ -52,7 +49,7 @@ const onScroll = (el: any) => {
       v-show="navBtn"
     >
       <template v-slot:label>
-        <div class="menu-btn__icon">
+        <div class="menu-btn__icon" :class="{active: menuState}">
           <span></span>
           <span></span>
           <span></span>
@@ -61,7 +58,7 @@ const onScroll = (el: any) => {
 
       <div class="menu-btn-drop__list">
         <q-list class="main-nav__list">
-          <q-item class="main-nav__item" clickable @click="scrollToElement($refs.about)">
+          <q-item class="main-nav__item" clickable @click="scrollToElement($refs.about)" v-close-popup>
 
             <arrow-right-svg/>
 
@@ -70,19 +67,19 @@ const onScroll = (el: any) => {
 
 
 
-          <q-item class="main-nav__item" clickable @click="scrollToElement($refs.principles)">
+          <q-item class="main-nav__item" clickable @click="scrollToElement($refs.principles)" v-close-popup>
             <arrow-right-svg/>
 
             {{ t('principles')}}
           </q-item>
 
-          <q-item class="main-nav__item" clickable @click="scrollToElement($refs.team)">
+          <q-item class="main-nav__item" clickable @click="scrollToElement($refs.team)" v-close-popup>
             <arrow-right-svg/>
 
             {{ t('team')}}
           </q-item>
 
-          <q-item class="main-nav__item" clickable @click="scrollToElement($refs.contacts)">
+          <q-item class="main-nav__item" clickable @click="scrollToElement($refs.contacts)" v-close-popup>
             <arrow-right-svg/>
 
             {{ t('contacts')}}
