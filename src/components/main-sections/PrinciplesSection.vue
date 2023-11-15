@@ -76,6 +76,9 @@ const { t } = useI18n();
           <p>
             {{ t('expertsText')}}
           </p>
+          <p>
+            {{ t('expertsText2')}}
+          </p>
         </q-card>
       </q-expansion-item>
     </div>

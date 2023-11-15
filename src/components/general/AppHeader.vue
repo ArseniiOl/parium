@@ -1,11 +1,28 @@
 <script setup lang="ts">
-import {ref} from "vue";
+import {onMounted, ref} from "vue";
 
 const mailVisible = ref(false);
+
+const headerMenu = ref(false);
+
+onMounted(() => {
+  window.addEventListener('scroll', onScroll)
+});
+
+const onScroll = (el: any) => {
+ let headerPos = el.target.documentElement.scrollTop;
+
+ if (headerPos >= 100) {
+   headerMenu.value = true
+ } else {
+   headerMenu.value = false
+ }
+}
+
 </script>
 
 <template>
-  <q-header class="app-header bg-transparent">
+  <q-header ref="header" class="app-header bg-transparent" :class="{'active': headerMenu}">
     <div class="app-header__wrap flex items-center no-wrap justify-between">
       <div class="logo-wrap flex items-end no-wrap">
         <div class="logo-wrap__icon">
@@ -16,6 +33,7 @@ const mailVisible = ref(false);
           <q-img fetchpriority="high" src="~assets/img/logo-parium.png" alt="parium" />
         </div>
       </div>
+
 
       <div class="app-header__social cursor-pointer">
         <a href="mailto: parium.group@gmail.com" class="ft-bold app-header__social__link" v-show="mailVisible">

@@ -2,6 +2,12 @@
 @import "../../lib/var";
 
 .app-header {
+  position: fixed;
+
+  @include min-screen(sm) {
+    position: absolute;
+  }
+
   &__wrap {
     padding: 17px 23px;
 
@@ -53,6 +59,40 @@
 
       &.active {
         color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+
+  &.active {
+    background: rgba(0, 0, 0, 0.5) !important;
+    box-shadow: 0 0 69px 44px rgba(0, 0, 0, 0.5);
+
+    @include min-screen(sm) {
+      background: transparent !important;
+      box-shadow: none;
+    }
+
+    .app-header__wrap {
+      padding: 12px 23px;
+
+      @include min-screen(sm) {
+        padding: 17px 23px;
+      }
+    }
+
+    .logo-wrap {
+      &__icon {
+        width: 45px;
+        height: 43px;
+
+        @include min-screen(sm) {
+          width: 50px;
+          height: 58px;
+        }
+      }
+
+      &__text {
+        display: none;
       }
     }
   }

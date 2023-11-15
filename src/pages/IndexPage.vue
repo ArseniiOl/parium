@@ -7,14 +7,12 @@ import ObjectsSection from "components/main-sections/ObjectsSection.vue";
 import ContactsSection from "components/main-sections/ContactsSection.vue";
 import ArrowRightSvg from "components/icons/ArrowRightSvg.vue";
 import {useI18n} from "vue-i18n";
-import {ref} from "vue";
+import {onMounted, ref} from "vue";
 import { scroll } from 'quasar'
 const { getScrollTarget, setVerticalScrollPosition } = scroll
 
 
 const { t } = useI18n();
-const slide = ref(1);
-const autoplay = ref(true);
 
 const scrollToElement = (el: any) => {
   const target = getScrollTarget(el)
@@ -22,39 +20,81 @@ const scrollToElement = (el: any) => {
   const duration = 1000
   setVerticalScrollPosition(target, offset, duration)
 }
+
+const navBtn = ref(false);
+
+onMounted(() => {
+  window.addEventListener('scroll', onScroll)
+});
+
+const onScroll = (el: any) => {
+  let navPos = el.target.documentElement.scrollTop;
+
+  if (navPos >= 100) {
+    navBtn.value = true
+  } else {
+    navBtn.value = false
+  }
+}
 </script>
 
 <template>
   <div class="main-container">
+    <q-btn-dropdown
+      ref="menu"
+      class="menu-btn q-ml-auto"
+      flat
+      no-caps
+      dropdown-icon="none"
+      transition-hide="slide-top"
+      transition-duration="550"
+      content-class="menu-btn-drop"
+      v-show="navBtn"
+    >
+      <template v-slot:label>
+        <div class="menu-btn__icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </template>
+
+      <div class="menu-btn-drop__list">
+        <q-list class="main-nav__list">
+          <q-item class="main-nav__item" clickable @click="scrollToElement($refs.about)">
+
+            <arrow-right-svg/>
+
+            {{ t('aboutUs')}}
+          </q-item>
+
+
+
+          <q-item class="main-nav__item" clickable @click="scrollToElement($refs.principles)">
+            <arrow-right-svg/>
+
+            {{ t('principles')}}
+          </q-item>
+
+          <q-item class="main-nav__item" clickable @click="scrollToElement($refs.team)">
+            <arrow-right-svg/>
+
+            {{ t('team')}}
+          </q-item>
+
+          <q-item class="main-nav__item" clickable @click="scrollToElement($refs.contacts)">
+            <arrow-right-svg/>
+
+            {{ t('contacts')}}
+          </q-item>
+        </q-list>
+      </div>
+    </q-btn-dropdown>
+
     <section class="welcome-section relative-position">
-      <q-carousel
-        animated
-        v-model="slide"
-        navigation
-        infinite
-        :autoplay="autoplay"
-        transition-prev="slide-right"
-        transition-next="slide-left"
-        class="back-slider"
-      >
-        <q-carousel-slide :name="1">
-          <div class="back-slider__img">
-            <q-img fetchpriority="high" src="~assets/img/slider-1-img-1.png" alt="img-1" />
-          </div>
-        </q-carousel-slide>
-        <q-carousel-slide :name="2">
-          <q-img fetchpriority="high" src="~assets/img/slider-1-img-1.png" alt="img-1" />
-        </q-carousel-slide>
-        <q-carousel-slide :name="3">
-          <q-img fetchpriority="high" src="~assets/img/slider-1-img-1.png" alt="img-1" />
-        </q-carousel-slide>
-        <q-carousel-slide :name="4">
-          <q-img fetchpriority="high" src="~assets/img/slider-1-img-1.png" alt="img-1" />
-        </q-carousel-slide>
-        <q-carousel-slide :name="5">
-          <q-img fetchpriority="high" src="~assets/img/slider-1-img-1.png" alt="img-1" />
-        </q-carousel-slide>
-      </q-carousel>
+      <div class="welcome-section__img">
+        <q-img fetchpriority="high" src="~assets/img/slider-1-img-1.png" alt="img-1" />
+      </div>
 
       <nav class="main-nav">
         <q-list class="main-nav__list">
