@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useLanguageStore } from "src/stores/language";
-import {onMounted, watch} from "vue";
+import {onMounted} from "vue";
 import {useQuasar} from "quasar";
 import {useI18n} from "vue-i18n";
 import {useRoute} from "vue-router";
@@ -14,6 +14,8 @@ onMounted(() => {
   languageStore.setLanguage();
   registerLocale(require("i18n-iso-countries/langs/en.json"));
 });
+
+
 </script>
 
 <template>
