@@ -121,6 +121,12 @@
           width: calc(100% + 56px);
           transform: translate(-111px, -48px);
         }
+        @include min-screen(md) {
+          transform: translate(-71px, -48px);
+        }
+        @include min-screen(lg) {
+          transform: translate(-111px, -48px);
+        }
       }
     }
   }
@@ -248,6 +254,20 @@
 
         span {
           display: none;
+        }
+      }
+    }
+  }
+}
+
+.eng-lang {
+  .object {
+    &__img {
+      &--wide {
+        &:after {
+          @include min-screen(lg) {
+            transform: translate(-95px, -48px);
+          }
         }
       }
     }

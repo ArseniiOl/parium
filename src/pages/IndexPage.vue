@@ -9,6 +9,9 @@ import ArrowRightSvg from "components/icons/ArrowRightSvg.vue";
 import {useI18n} from "vue-i18n";
 import {onMounted, ref} from "vue";
 import { scroll } from 'quasar'
+import {useLanguageStore, LanguagesEnum} from "stores/language";
+
+const languageStore = useLanguageStore();
 
 const { t } = useI18n();
 const navBtn = ref(false);
@@ -35,7 +38,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="main-container">
+  <div class="main-container" :class="{'eng-lang':  languageStore.getLanguage?.value === LanguagesEnum.EN}">
     <q-btn-dropdown
       ref="menu"
       class="menu-btn q-ml-auto"

@@ -9,7 +9,9 @@ import BuildingSvg from "components/icons/BuildingSvg.vue";
 import FunctionalitySvg from "components/icons/FunctionalitySvg.vue";
 import SpendingSvg from "components/icons/SpendingSvg.vue";
 import AccuracySvg from "components/icons/AccuracySvg.vue";
+import {useLanguageStore, LanguagesEnum} from "stores/language";
 
+const languageStore = useLanguageStore();
 const { t } = useI18n();
 const slider = ref(1);
 const autoplay = ref(true);
@@ -108,7 +110,7 @@ const autoplay = ref(true);
         </p>
       </div>
 
-      <div class="timeline">
+      <div class="timeline" :class="{'timeline--eng':  languageStore.getLanguage?.value === LanguagesEnum.EN}">
         <div class="timeline__item timeline__item--1">
           <div class="timeline__item__top timeline__item__num">
             2018

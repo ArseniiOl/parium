@@ -64,6 +64,13 @@
   .q-item {
     padding: 0;
 
+    @include min-screen(md) {
+      min-height: 70px;
+    }
+    @include min-screen(xl) {
+      min-height: 80px;
+    }
+
     &__section--side {
       color: #DEDFE5;
 
@@ -212,4 +219,15 @@
       }
     }
   }
+}
+
+
+.eng-lang {
+    .principles-item {
+      &__title {
+        @include min-screen(lg) {
+          font-size: 36px !important;
+        }
+      }
+    }
 }

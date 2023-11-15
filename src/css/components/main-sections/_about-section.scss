@@ -497,6 +497,18 @@
       }
     }
   }
+
+  &--eng {
+    .timeline__point {
+      @include min-screen(md) {
+        margin: 0 auto 26px;
+      }
+
+      &--lg {
+        margin: 0 0 43px 35%;
+      }
+    }
+  }
 }
 
 .about-carousel {

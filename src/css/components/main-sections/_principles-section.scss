@@ -104,6 +104,9 @@
   @media (min-width: 360px) {
     padding: 27px 20px 31px 38px;
   }
+  @include min-screen(md) {
+    padding: 27px 20px 31px 28px;
+  }
   @include min-screen(lg) {
     padding: 38px 47px 20px 75px;
   }
@@ -133,6 +136,12 @@
     }
     @include min-screen(md) {
       margin-bottom: 13px;
+      font-size: 31px;
+      line-height: 19px;
+    }
+    @include min-screen(lg) {
+      font-size: 47px;
+      line-height: 30px;
     }
   }
 
