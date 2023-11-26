@@ -119,7 +119,8 @@ const autoplay = ref(true);
           <span class="timeline__point timeline__point--lg"></span>
 
           <div class="timeline__item__bottom">
-            {{ t('timelineText1')}}
+            {{ t('timelineText1')}} <span class="text-no-wrap">{{ t('timelineTextSpan')}}</span>
+            {{ t('timelineText1part')}}
           </div>
         </div>
 
@@ -147,7 +148,9 @@ const autoplay = ref(true);
           <span class="timeline__point"></span>
 
           <div class="timeline__item__bottom">
-            <p> {{ t('timelineText3')}} </p>
+            <p> {{ t('timelineText3')}} <span class="text-no-wrap">
+               {{ t('timelineText3span')}}
+            </span> </p>
 
             <span>2021</span>
           </div>

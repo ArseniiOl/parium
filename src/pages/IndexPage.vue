@@ -38,7 +38,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="main-container" :class="{'eng-lang':  languageStore.getLanguage?.value === LanguagesEnum.EN}">
+  <div class="main-container" :class="{'eng-lang':  languageStore.getLanguage?.value === LanguagesEnum.EN,
+  'deu-lang':  languageStore.getLanguage?.value === LanguagesEnum.DEU,
+  }">
     <q-btn-dropdown
       ref="menu"
       class="menu-btn q-ml-auto"
@@ -91,7 +93,7 @@ onMounted(() => {
       </div>
     </q-btn-dropdown>
 
-    <section class="welcome-section relative-position">
+    <section ref="welcome" class="welcome-section relative-position">
       <div class="welcome-section__img">
         <q-img fetchpriority="high" src="~assets/img/slider-1-img-1.png" alt="img-1" />
       </div>

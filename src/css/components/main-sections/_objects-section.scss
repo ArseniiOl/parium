@@ -273,3 +273,29 @@
     }
   }
 }
+
+.deu-lang {
+  .object {
+    &__img {
+      &--wide {
+        &:after {
+          width: 100%;
+          transform: translate(-40px, -75px);
+
+          @media (min-width: 360px) {
+            transform: translate(-46px, -64px);
+          }
+          @include min-screen(xs) {
+            transform: translate(-61px, -48px);
+          }
+          @include min-screen(md) {
+            transform: translate(-94px, -48px);
+          }
+          @include min-screen(lg) {
+            transform: translate(-111px, -48px);
+          }
+        }
+      }
+    }
+  }
+}

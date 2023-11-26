@@ -5,6 +5,11 @@ const mailVisible = ref(false);
 
 const headerMenu = ref(false);
 
+
+const scrollToTop = () => {
+  window.scrollTo(0, 0);
+}
+
 onMounted(() => {
   window.addEventListener('scroll', onScroll)
 });
@@ -25,7 +30,7 @@ const onScroll = (el: any) => {
   <q-header ref="header" class="app-header bg-transparent" :class="{'active': headerMenu}">
     <div class="app-header__wrap flex items-center no-wrap justify-between">
       <div class="logo-wrap flex items-end no-wrap">
-        <div class="logo-wrap__icon">
+        <div class="logo-wrap__icon" @click="scrollToTop">
           <q-img fetchpriority="high" src="~assets/img/logo.png" alt="logo" />
         </div>
 

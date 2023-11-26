@@ -14,9 +14,7 @@ const routes: RouteRecordRaw[] = [
         children: [
           {
             name: RouteNamesEnum.HOME_ROUTE_NAME,
-         //   path: RoutePathsEnum.HOME_PATH,
             path: `${RoutePathsEnum.APP_EMPTY_PATH}/${RoutePathsEnum.LANGUAGE_LAYOUT_PATH}/${RoutePathsEnum.HOME_PATH}`,
-
             component: () => import( /*webpackChunkName: "index-page"*/ 'pages/IndexPage.vue'),
           },
         ]
