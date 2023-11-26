@@ -2,18 +2,9 @@ import { RouteRecordRaw } from 'vue-router';
 import { RoutePathsEnum } from 'src/utils/enums/general/RoutePathsEnum';
 import { RouteNamesEnum } from 'src/utils/enums/general/RouteNamesEnum';
 
-const language = localStorage.getItem('lang');
-
 const routes: RouteRecordRaw[] = [
   {
-    path: RoutePathsEnum.APP_ROOT_PATH,
-    redirect: `/${language ? `${language}/` : ''}${
-      RoutePathsEnum.APP_EMPTY_PATH
-    }`,
-  },
-  {
-    name: RouteNamesEnum.LANGUAGE_LAYOUT,
-    path: RoutePathsEnum.LANGUAGE_LAYOUT_PARAMS,
+    path: `/${RoutePathsEnum.LANGUAGE_LAYOUT_PATH}`,
     component: () => import( /*webpackChunkName: "language-layout"*/ 'layouts/LanguageLayout.vue'),
     children: [
       {
@@ -23,7 +14,9 @@ const routes: RouteRecordRaw[] = [
         children: [
           {
             name: RouteNamesEnum.HOME_ROUTE_NAME,
-            path: RoutePathsEnum.HOME_PATH,
+         //   path: RoutePathsEnum.HOME_PATH,
+            path: `${RoutePathsEnum.APP_EMPTY_PATH}/${RoutePathsEnum.LANGUAGE_LAYOUT_PATH}/${RoutePathsEnum.HOME_PATH}`,
+
             component: () => import( /*webpackChunkName: "index-page"*/ 'pages/IndexPage.vue'),
           },
         ]

@@ -1,6 +1,5 @@
 import { createPinia, defineStore } from 'pinia';
 import router from 'src/router';
-import { Quasar } from "quasar";
 import {i18n} from "boot/i18n";
 
 export enum LanguagesEnum {
@@ -13,22 +12,18 @@ export enum LanguagesEnum {
 export const AppLanguages = [
   {
     label: "Укр",
-    quasarLangName: "uk",
     value: LanguagesEnum.UA,
   },
   {
     label: "Eng",
-    quasarLangName: "en-US",
     value: LanguagesEnum.EN,
   },
   {
     label: "DEU",
-    quasarLangName: "deu",
     value: LanguagesEnum.DEU,
   },
   {
     label: "PLN",
-    quasarLangName: "pl",
     value: LanguagesEnum.PL,
   },
 
@@ -38,7 +33,7 @@ export const AppLanguages = [
 export const useLanguageStore = defineStore({
   id: 'language',
   state: () => ({
-    language: null as {value: LanguagesEnum; label: string; quasarLangName: string;} | null,
+    language: null as {value: LanguagesEnum; label: string;} | null,
   }),
   getters: {
     getLanguage(): {value: LanguagesEnum; label: string} | null {
@@ -53,8 +48,6 @@ export const useLanguageStore = defineStore({
       const routerInstance = (await router({ store: createPinia() }));
       const code = routerInstance.currentRoute.value.params.lang?.toString() || localStorage.getItem("lang") || navigator.language.split("-")[0] || "";
       this.language = AppLanguages.find(i => i.value === (payload?.lang || code)) || AppLanguages[0];
-      const lang = await import(`quasar/lang/${this.language.quasarLangName || AppLanguages[0].quasarLangName}`);
-      Quasar.lang.set(lang);
 
       if (i18n) {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment

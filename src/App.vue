@@ -5,14 +5,17 @@ import {useQuasar} from "quasar";
 import {useI18n} from "vue-i18n";
 import {useRoute} from "vue-router";
 import { LanguagesEnum } from 'src/utils/enums/language/LanguagesEnum';
-import {registerLocale} from "i18n-iso-countries";
+import {registerLocale} from "i18n-iso-countries"
 
-const route = useRoute();
+registerLocale(require("i18n-iso-countries/langs/en.json"));
+//const route = useRoute();
 const languageStore = useLanguageStore();
+
+
 
 onMounted(() => {
   languageStore.setLanguage();
-  registerLocale(require("i18n-iso-countries/langs/en.json"));
+
 });
 
 
