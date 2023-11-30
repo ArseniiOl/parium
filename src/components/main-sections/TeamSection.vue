@@ -98,7 +98,8 @@ const teamSlide = ref(1);
 
               <p>
                 {{ t('ihorText2')}} <br>
-                {{ t('ihorText2part')}}
+                {{ t('ihorText2part')}} <br>
+                {{ t('ihorText2part2')}}
               </p>
             </div>
 
@@ -121,7 +122,9 @@ const teamSlide = ref(1);
 
           <div class="team-slider__text">
             <div class="team-slider__text__title team-slider__text__title--sm ft-bold">
-              {{ t('teamNames')}}
+              {{ t('teamName1')}} <br>
+              {{ t('teamName2')}} <br>
+              {{ t('teamName3')}}
             </div>
 
             <p>

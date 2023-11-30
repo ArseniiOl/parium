@@ -6,7 +6,7 @@
   padding: 140px 32px 120px;
 
   @media (min-width: 360px) {
-    padding: 140px 52px 120px;
+    padding: 140px 32px 120px;
   }
   @include min-screen(md) {
     padding: 100px 52px 188px;
@@ -28,9 +28,10 @@
 
   &__text {
     margin-bottom: 42px;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 19px;
     text-align: center;
+    white-space: nowrap;
   }
 
   &__link {
