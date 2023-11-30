@@ -362,7 +362,7 @@
         line-height: 20px;
         min-width: 10px;
         display: block;
-        max-width: 138px;
+        max-width: 145px;
       }
 
       span {
@@ -731,20 +731,32 @@
   .timeline {
     &__item {
       &--2 {
+        transform: translate(-5px, -53px);
+        @media (min-width: 370px) {
+          transform: translate(-22px, -53px);
+        }
         @include min-screen(md) {
           transform: translateY(-25px);
         }
       }
 
       &--3 {
+        transform: translate(46px, -63px);
+
+        @media (min-width: 370px) {
+          transform: translate(30px, -85px);
+        }
         @include min-screen(md) {
-          transform: translateY(-20px);
+          transform: translateY(-30px);
         }
       }
 
       &--4 {
+        @media (min-width: 370px) {
+          transform: translate(70px, -137px);
+        }
         @include min-screen(md) {
-          transform: translateY(-15px);
+          transform: translateY(-25px);
         }
       }
     }
@@ -758,6 +770,30 @@
     }
     @include min-screen(md) {
       max-width: 100%;
+    }
+  }
+}
+
+.eng-lang {
+  .timeline {
+    &__item {
+      &--2 {
+        @include min-screen(md) {
+          transform: translateY(-44px);
+        }
+      }
+
+      &--3 {
+        @include min-screen(md) {
+          transform: translateY(-48px);
+        }
+      }
+
+      &--4 {
+        @include min-screen(md) {
+          transform: translateY(-44px);
+        }
+      }
     }
   }
 }

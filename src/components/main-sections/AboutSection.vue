@@ -119,8 +119,10 @@ const autoplay = ref(true);
           <span class="timeline__point timeline__point--lg"></span>
 
           <div class="timeline__item__bottom">
-            {{ t('timelineText1')}} <span class="text-no-wrap">{{ t('timelineTextSpan')}}</span>
-            {{ t('timelineText1part')}}
+            {{ t('timelineText1part1')}} <span class="text-no-wrap ft-extrabold">"Parium Group"</span>
+            {{ t('timelineText1part2')}}
+            <span class="text-no-wrap">{{ t('timelineTextSpan')}}</span>
+            {{ t('timelineText1part3')}}
           </div>
         </div>
 
@@ -133,7 +135,7 @@ const autoplay = ref(true);
           <span class="timeline__point"></span>
 
           <div class="timeline__item__bottom">
-           <p> {{ t('timelineText2')}} </p>
+           <p> {{ t('timelineText2')}} <span class="text-no-wrap">{{ t('timelineText2span')}}</span> </p>
 
             <span>2020</span>
           </div>
@@ -165,7 +167,9 @@ const autoplay = ref(true);
           <span class="timeline__point"></span>
 
           <div class="timeline__item__bottom">
-            <p> {{ t('timelineText4')}} </p>
+            <p> {{ t('timelineText4')}} <span class="text-no-wrap">
+               {{ t('timelineText4span')}}
+            </span> </p>
 
             <span>2022</span>
           </div>
