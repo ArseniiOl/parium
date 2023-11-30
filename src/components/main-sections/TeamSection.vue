@@ -56,6 +56,8 @@ const teamSlide = ref(1);
 
               <p>
                 {{ t('ostapText2')}}
+               <span class="text-no-wrap"> {{ t('ostapText2span')}}</span>
+                {{ t('ostapText2part')}}
               </p>
             </div>
 
@@ -90,11 +92,13 @@ const teamSlide = ref(1);
 
                <span class="ft-bold">
                  {{ t('ihorTextTitle') }}
-               </span> {{ t('ihorText1')}}
+               </span> {{ t('ihorText1')}} <br>
+                {{ t('ihorText1part')}}
               </p>
 
               <p>
-                {{ t('ihorText2')}}
+                {{ t('ihorText2')}} <br>
+                {{ t('ihorText2part')}}
               </p>
             </div>
 

@@ -40,6 +40,7 @@ onMounted(() => {
 <template>
   <div class="main-container" :class="{'eng-lang':  languageStore.getLanguage?.value === LanguagesEnum.EN,
   'deu-lang':  languageStore.getLanguage?.value === LanguagesEnum.DEU,
+  'pl-lang':  languageStore.getLanguage?.value === LanguagesEnum.PL,
   }">
     <q-btn-dropdown
       ref="menu"

@@ -8,6 +8,11 @@ const routes: RouteRecordRaw[] = [
     component: () => import( /*webpackChunkName: "language-layout"*/ 'layouts/LanguageLayout.vue'),
     children: [
       {
+        name: RouteNamesEnum.INTRO_ROUTE_NAME,
+        path: `${RoutePathsEnum.APP_EMPTY_PATH}/${RoutePathsEnum.LANGUAGE_LAYOUT_PATH}/${RoutePathsEnum.INTRO_PATH}`,
+        component: () => import( /*webpackChunkName: "intro-page"*/ 'pages/IntroPage.vue'),
+      },
+      {
         name: RouteNamesEnum.MAIN_LAYOUT,
         path: RoutePathsEnum.APP_EMPTY_PATH,
         component: () => import( /*webpackChunkName: "main-layout"*/ 'layouts/MainLayout.vue'),

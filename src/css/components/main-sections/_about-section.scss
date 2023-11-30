@@ -518,6 +518,10 @@
 
       &--lg {
         margin: 0 0 43px 0%;
+
+        @include min-screen(md) {
+          margin: 0 0 43px 35%;
+        }
       }
     }
   }

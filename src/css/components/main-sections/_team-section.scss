@@ -26,12 +26,12 @@
 }
 
 .team-slider {
-  height: 850px;
+  height: 860px;
   background: transparent;
   padding-bottom: 150px;
 
   @include min-screen(sm) {
-    height: 614px;
+    height: 624px;
     margin-bottom: 0;
     padding-bottom: 0;
   }
@@ -180,6 +180,10 @@
 
     span {
       color: #4E5694;
+
+      &.text-no-wrap {
+        color: #2D2D2D;
+      }
     }
 
     p {

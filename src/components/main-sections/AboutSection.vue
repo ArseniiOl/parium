@@ -184,6 +184,7 @@ const autoplay = ref(true);
         transition-next="slide-left"
         navigation
         padding
+        swipeable
         class="about-slider"
       >
         <q-carousel-slide :name="1">
