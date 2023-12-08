@@ -16,7 +16,7 @@ const toggleLanguage = (value: LanguagesEnum ) => {
 </script>
 
 <template>
-<q-page class="intro-page flex no-wrap items-center column justify-center">
+<q-page class="intro-page flex no-wrap items-center column justify-center fullscreen">
   <div class="logo-wrap">
     <div class="logo-wrap__icon">
       <q-img fetchpriority="high" src="~assets/img/logo.png" alt="logo" />
@@ -32,11 +32,9 @@ const toggleLanguage = (value: LanguagesEnum ) => {
       :class="{'active': languageStore.getLanguage?.value === item.value}"
       v-for="(item, index) in AppLanguages" :key="index" flat class="lang-btn"
       @click="async () => {
-             await toggleLanguage(item.value)
-              $router.push(homeLink());
-
-            }"
-      >
+           await  toggleLanguage(item.value)
+             $router.push(homeLink());
+          }">
       {{ item.label}}
     </q-btn>
 

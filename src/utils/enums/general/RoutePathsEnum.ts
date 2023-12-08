@@ -3,6 +3,6 @@ export enum RoutePathsEnum {
   APP_EMPTY_PATH = '',
   LANGUAGE_LAYOUT_PATH = ":lang?",
   LANGUAGE_LAYOUT_PARAMS = '/:lang?',
-  HOME_PATH = 'parium',
-  INTRO_PATH = '',
+  HOME_PATH = 'home',
+  INTRO_PATH = '/',
 }
