@@ -190,9 +190,10 @@ const autoplay = ref(true);
         padding
         swipeable
         class="about-slider"
+        v-if="$q.screen.xl || $q.screen.lg || $q.screen.md"
       >
         <q-carousel-slide :name="1">
-          <div class="flex no-wrap about-slider__wrap" v-if="$q.screen.xl || $q.screen.lg || $q.screen.md">
+          <div class="flex no-wrap about-slider__wrap">
             <div class="about-slider__img">
               <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
             </div>
@@ -200,52 +201,150 @@ const autoplay = ref(true);
               <q-img fetchpriority="high" src="~assets/img/about-slider-img-2.png" alt="img-2" />
             </div>
             <div class="about-slider__img">
-              <q-img fetchpriority="high" src="~assets/img/about-slider-img-3.png" alt="img-1" />
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-3.png" alt="img-3" />
             </div>
           </div>
-          <div class="flex no-wrap about-slider__wrap" v-else>
+        </q-carousel-slide>
+        <q-carousel-slide :name="2">
+          <div class="flex no-wrap about-slider__wrap">
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-4.png" alt="img-1" />
+            </div>
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-5.png" alt="img-2" />
+            </div>
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-6.png" alt="img-1" />
+            </div>
+          </div>
+        </q-carousel-slide>
+        <q-carousel-slide :name="3">
+          <div class="flex no-wrap about-slider__wrap">
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-7.png" alt="img-1" />
+            </div>
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-8.png" alt="img-2" />
+            </div>
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-9.png" alt="img-1" />
+            </div>
+          </div>
+        </q-carousel-slide>
+        <q-carousel-slide :name="4">
+          <div class="flex no-wrap about-slider__wrap">
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-10.png" alt="img-1" />
+            </div>
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-11.png" alt="img-2" />
+            </div>
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-12.png" alt="img-1" />
+            </div>
+          </div>
+
+        </q-carousel-slide>
+
+      </q-carousel>
+      <q-carousel
+        animated
+        v-model="slider"
+        infinite
+        :autoplay="autoplay"
+        transition-prev="slide-right"
+        transition-next="slide-left"
+        navigation
+        padding
+        swipeable
+        class="about-slider"
+        v-else
+      >
+        <q-carousel-slide :name="1">
+          <div class="flex no-wrap about-slider__wrap">
             <div class="about-slider__img">
               <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
             </div>
           </div>
         </q-carousel-slide>
         <q-carousel-slide :name="2">
-          <div class="flex no-wrap about-slider__wrap" v-if="$q.screen.xl || $q.screen.lg || $q.screen.md">
-            <div class="about-slider__img">
-              <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
-            </div>
-            <div class="about-slider__img">
-              <q-img fetchpriority="high" src="~assets/img/about-slider-img-2.png" alt="img-2" />
-            </div>
-            <div class="about-slider__img">
-              <q-img fetchpriority="high" src="~assets/img/about-slider-img-3.png" alt="img-1" />
-            </div>
-          </div>
-          <div class="flex no-wrap about-slider__wrap" v-else>
+          <div class="flex no-wrap about-slider__wrap">
             <div class="about-slider__img">
               <q-img fetchpriority="high" src="~assets/img/about-slider-img-2.png" alt="img-2" />
             </div>
           </div>
         </q-carousel-slide>
         <q-carousel-slide :name="3">
-          <div class="flex no-wrap about-slider__wrap" v-if="$q.screen.xl || $q.screen.lg || $q.screen.md">
-            <div class="about-slider__img">
-              <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
-            </div>
-            <div class="about-slider__img">
-              <q-img fetchpriority="high" src="~assets/img/about-slider-img-2.png" alt="img-2" />
-            </div>
-            <div class="about-slider__img">
-              <q-img fetchpriority="high" src="~assets/img/about-slider-img-3.png" alt="img-1" />
-            </div>
-          </div>
-          <div class="flex no-wrap about-slider__wrap" v-else>
+          <div class="flex no-wrap about-slider__wrap">
             <div class="about-slider__img">
               <q-img fetchpriority="high" src="~assets/img/about-slider-img-3.png" alt="img-3" />
             </div>
           </div>
         </q-carousel-slide>
-       
+        <q-carousel-slide :name="4">
+          <div class="flex no-wrap about-slider__wrap">
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-4.png" alt="img-4" />
+            </div>
+          </div>
+        </q-carousel-slide>
+        <q-carousel-slide :name="5">
+          <div class="flex no-wrap about-slider__wrap">
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-5.png" alt="img-5" />
+            </div>
+          </div>
+        </q-carousel-slide>
+        <q-carousel-slide :name="6">
+          <div class="flex no-wrap about-slider__wrap">
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-6.png" alt="img-6" />
+            </div>
+          </div>
+        </q-carousel-slide>
+        <q-carousel-slide :name="7">
+          <div class="flex no-wrap about-slider__wrap">
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-7.png" alt="img-7" />
+            </div>
+          </div>
+        </q-carousel-slide>
+        <q-carousel-slide :name="8">
+          <div class="flex no-wrap about-slider__wrap">
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-8.png" alt="img-8" />
+            </div>
+          </div>
+        </q-carousel-slide>
+        <q-carousel-slide :name="9">
+          <div class="flex no-wrap about-slider__wrap">
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-9.png" alt="img-9" />
+            </div>
+          </div>
+        </q-carousel-slide>
+        <q-carousel-slide :name="10">
+          <div class="flex no-wrap about-slider__wrap">
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-10.png" alt="img-10" />
+            </div>
+          </div>
+        </q-carousel-slide>
+        <q-carousel-slide :name="11">
+          <div class="flex no-wrap about-slider__wrap">
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-11.png" alt="img-11" />
+            </div>
+          </div>
+        </q-carousel-slide>
+        <q-carousel-slide :name="12">
+          <div class="flex no-wrap about-slider__wrap">
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-12.png" alt="img-12" />
+            </div>
+          </div>
+        </q-carousel-slide>
+
       </q-carousel>
     </div>
 

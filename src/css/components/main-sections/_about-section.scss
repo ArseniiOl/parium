@@ -558,10 +558,6 @@
     height: 100%;
     width: 100%;
 
-    @include min-screen(md) {
-      width: 65%;
-    }
-
     + .about-slider__img {
       @include min-screen(md) {
         margin-left: 21px;
