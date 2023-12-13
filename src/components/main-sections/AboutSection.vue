@@ -216,6 +216,9 @@ const autoplay = ref(true);
             <div class="about-slider__img">
               <q-img fetchpriority="high" src="~assets/img/about-slider-img-6.png" alt="img-1" />
             </div>
+            <div class="about-slider__img">
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-9.png" alt="img-9" />
+            </div>
           </div>
         </q-carousel-slide>
         <q-carousel-slide :name="3">
@@ -227,20 +230,20 @@ const autoplay = ref(true);
               <q-img fetchpriority="high" src="~assets/img/about-slider-img-8.png" alt="img-2" />
             </div>
             <div class="about-slider__img">
-              <q-img fetchpriority="high" src="~assets/img/about-slider-img-9.png" alt="img-1" />
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-10.png" alt="img-10" />
             </div>
           </div>
         </q-carousel-slide>
         <q-carousel-slide :name="4">
           <div class="flex no-wrap about-slider__wrap">
             <div class="about-slider__img">
-              <q-img fetchpriority="high" src="~assets/img/about-slider-img-10.png" alt="img-1" />
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-11.png" alt="img-11" />
             </div>
             <div class="about-slider__img">
-              <q-img fetchpriority="high" src="~assets/img/about-slider-img-11.png" alt="img-2" />
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-12.png" alt="img-12" />
             </div>
             <div class="about-slider__img">
-              <q-img fetchpriority="high" src="~assets/img/about-slider-img-12.png" alt="img-1" />
+              <q-img fetchpriority="high" src="~assets/img/about-slider-img-1.png" alt="img-1" />
             </div>
           </div>
 
