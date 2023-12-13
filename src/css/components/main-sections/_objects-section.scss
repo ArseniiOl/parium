@@ -297,5 +297,56 @@
         }
       }
     }
+
+    &.active {
+      .object {
+        &__toggle {
+          &__title {
+            font-size: 22px;
+
+            @include min-screen(sm) {
+              font-size: 29px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.deu-lang, .eng-lang, .pl-lang {
+  .object {
+    &__toggle {
+      &__subtitle {
+        max-width: 264px;
+
+        @include min-screen(xs) {
+          max-width: 100%;
+        }
+      }
+    }
+
+    &.active {
+      .object {
+        &__toggle {
+          transform: translateY(36px);
+
+          @include min-screen(sm) {
+            transform: translateY(15px);
+          }
+        }
+
+        &__line {
+          transform: translate(0, 49px);
+
+          @media (min-width: 420px) {
+            transform: translate(-20%, 88px);
+          }
+          @include min-screen(sm) {
+            transform: translate(-81px, 25px);
+          }
+        }
+      }
+    }
   }
 }

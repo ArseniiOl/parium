@@ -19,7 +19,6 @@ const teamSlide = ref(1);
         vertical
         transition-prev="slide-down"
         transition-next="slide-up"
-        swipeable
         animated
         class="team-slider"
         ref="carousel"

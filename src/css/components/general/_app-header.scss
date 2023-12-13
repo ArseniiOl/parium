@@ -31,6 +31,7 @@
       top: 25px;
       animation: moveInRight 1s ease-out;
 
+
       @media (min-width: 360px) {
         padding: 4px 16px;
       }
@@ -42,6 +43,15 @@
         top: 0;
         right: unset;
         border: 1px solid transparent;
+      }
+
+      &.active {
+        background: rgba(0, 0, 0, 1);
+        z-index: 9999;
+
+        @include min-screen(sm) {
+          background: transparent;
+        }
       }
 
       &:hover {
@@ -97,6 +107,10 @@
         display: none;
       }
     }
+  }
+
+  &.z-upper {
+    z-index: 9999 !important;
   }
 }
 

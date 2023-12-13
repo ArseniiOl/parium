@@ -2,14 +2,17 @@
 
 .team-banner {
   height: 100vh;
-  background-image: url("src/assets/img/team-banner.png");
+  background-image: url("src/assets/img/team-banner-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
   padding: 28px 25px;
 
   @media (min-width: 360px) {
     padding: 38px 35px;
+  }
+  @include min-screen(sm) {
+    background-image: url("src/assets/img/team-banner.png");
+    background-position: top center;
   }
   @include min-screen(md) {
     height: 648px;

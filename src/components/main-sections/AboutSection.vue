@@ -360,7 +360,7 @@ const autoplay = ref(true);
       <div class="guarantees-wrap__notice ft-extra-light">
           {{t('guaranteesNotice1')}}
 
-        <span class="ft-bold">{{t('guaranteesNotice2')}}</span>
+        <span class="ft-bold text-no-wrap">{{t('guaranteesNotice2')}}</span>
       </div>
 
       <div class="guarantees-wrap__items">

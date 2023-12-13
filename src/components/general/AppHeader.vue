@@ -27,7 +27,7 @@ const onScroll = (el: any) => {
 </script>
 
 <template>
-  <q-header ref="header" class="app-header bg-transparent" :class="{'active': headerMenu}">
+  <q-header ref="header" class="app-header bg-transparent" :class="{'active': headerMenu, 'z-upper': mailVisible}">
     <div class="app-header__wrap flex items-center no-wrap justify-between">
       <div class="logo-wrap flex items-end no-wrap">
         <div class="logo-wrap__icon" @click="scrollToTop">
@@ -41,7 +41,10 @@ const onScroll = (el: any) => {
 
 
       <div class="app-header__social cursor-pointer">
-        <a href="mailto: parium.group@gmail.com" class="ft-bold app-header__social__link" v-show="mailVisible">
+        <a href="mailto: parium.group@gmail.com"
+           class="ft-bold app-header__social__link"
+           :class="{active: headerMenu}"
+           v-show="mailVisible">
           parium.group@gmail.com
         </a>
 
